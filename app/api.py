@@ -10,12 +10,12 @@ ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT))
 
 from app.engine import DynamicSecurityGraph, AttackReconstructor
-from app.simulator import BuildingSimulator, process_events
+from app.simulator import BuildingSimulator, process_events, get_legacy_sim
 
 app = FastAPI(title="Neurobrain X", version="0.2.0")
 app.mount("/ui", StaticFiles(directory=str(ROOT/"frontend"), html=True), name="ui")
 
-sim = BuildingSimulator()
+sim = get_legacy_sim()
 processor_events, processor = process_events(sim.normal_events(120))
 for e in processor_events:
     sim.graph.apply(e)

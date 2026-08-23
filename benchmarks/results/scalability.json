@@ -1,0 +1,30 @@
+[
+  {
+    "events": 100,
+    "ingest_latency_s": 0.0,
+    "recon_latency_s": 0.0,
+    "total_runtime_s": 0.001,
+    "throughput_eps": 100000.0
+  },
+  {
+    "events": 1000,
+    "ingest_latency_s": 0.0,
+    "recon_latency_s": 0.0009961128234863281,
+    "total_runtime_s": 0.001,
+    "throughput_eps": 1000000.0
+  },
+  {
+    "events": 5000,
+    "ingest_latency_s": 0.020474910736083984,
+    "recon_latency_s": 0.09472489356994629,
+    "total_runtime_s": 0.11519980430603027,
+    "throughput_eps": 43402.85150760685
+  },
+  {
+    "events": 10000,
+    "ingest_latency_s": 0.0317840576171875,
+    "recon_latency_s": 0.4531590938568115,
+    "total_runtime_s": 0.484943151473999,
+    "throughput_eps": 20620.973756624266
+  }
+]

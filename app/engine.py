@@ -331,6 +331,9 @@ class AttackReconstructor:
                 p.score += 50.0
                 p.confidence += 15.0
             
+            p.score = min(100.0, max(0.0, p.score))
+            p.confidence = min(100.0, max(0.0, p.confidence))
+            
             uniq[tuple(p.nodes)] = p
             
         return sorted(uniq.values(), key=lambda p: (p.score, p.confidence), reverse=True)
@@ -349,9 +352,6 @@ class AttackReconstructor:
         score -= gap_count * 5
         confidence -= gap_count * 30
         
-        score = min(100.0, max(0.0, score))
-        confidence = min(99.0, max(0.0, confidence))
-
         explanation = [
             f"Path consists of {obs_count} observed transition(s) and {gap_count} inferred gap(s).",
         ]

@@ -47,3 +47,9 @@ Thumbs.db
 
 # Jupyter
 .ipynb_checkpoints/
+
+# Local benchmark/test output
+bench_out.txt
+error_log.txt
+pytest_detailed.txt
+pytest_out.txt
