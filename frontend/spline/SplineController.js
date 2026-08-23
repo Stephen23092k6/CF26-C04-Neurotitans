@@ -14,6 +14,15 @@ class SplineController {
                 console.log("Spline Viewer Loaded and Ready");
             });
         }
+        
+        if (window.BroadcastChannel) {
+            this.replayChannel = new BroadcastChannel('neurobrain_replay');
+            this.replayChannel.onmessage = (e) => {
+                if (e.data && e.data.type === 'replay_step') {
+                    this.updateReplayState({ activeEvent: e.data.activeEvent });
+                }
+            };
+        }
     }
 
     _setVar(name, value) {
