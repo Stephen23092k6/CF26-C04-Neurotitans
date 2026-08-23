@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Neurobrain X - C-04 SOC</title>
+  <link rel="stylesheet" href="/ui/style.css">
+</head>
+<body>
+  <header>
+    <div class="brand">
+      NEUROBRAIN X 
+      <span class="badge">PROTOTYPE C-04</span>
+    </div>
+    <div class="header-stats">
+      <span id="stat-nodes">NODES: --</span>
+      <span id="stat-edges">EDGES: --</span>
+      <span id="stat-events">EVENTS: --</span>
+    </div>
+    <div class="status online">● ENGINE ONLINE</div>
+  </header>
+
+  <div class="layout">
+    <!-- LEFT PANEL: Navigation & Simulation -->
+    <aside class="panel left-panel">
+      <div class="panel-header">SIMULATION CONTROL</div>
+      <div class="panel-content">
+        <button id="btn-normal" class="btn">Baseline State</button>
+        <button id="btn-attack" class="btn danger-btn">Reconstruct Incident</button>
+        
+        <div class="section-title">RESILIENCE LAB (C-04)</div>
+        <div class="control-group">
+          <label>Missing Telemetry <span id="val-loss">20%</span></label>
+          <input type="range" id="inp-loss" min="0" max="0.5" step="0.05" value="0.2">
+        </div>
+        <div class="control-group">
+          <label>Delay Window <span id="val-delay">4s</span></label>
+          <input type="range" id="inp-delay" min="0" max="12" step="1" value="4">
+        </div>
+        <div class="control-group">
+          <label>Duplicate Rate <span id="val-dup">10%</span></label>
+          <input type="range" id="inp-dup" min="0" max="0.5" step="0.05" value="0.1">
+        </div>
+        <button id="btn-simulate" class="btn">Apply Degradation</button>
+
+        <div class="section-title">BENCHMARK</div>
+        <button id="btn-benchmark" class="btn outline">Run Full Benchmark</button>
+      </div>
+    </aside>
+
+    <!-- CENTER WORKSPACE: 2D Graph -->
+    <main class="workspace">
+      <div class="workspace-header">SPATIAL SECURITY GRAPH</div>
+      <div id="graph-container">
+        <!-- Canvas for rendering the fallback 2D graph -->
+        <canvas id="graph-canvas"></canvas>
+        <div id="spline-placeholder" class="hidden">
+          <!-- Spline iframe would go here -->
+        </div>
+      </div>
+    </main>
+
+    <!-- RIGHT PANEL: Inspector -->
+    <aside class="panel right-panel">
+      <div class="tabs">
+        <div class="tab active" id="tab-incident">INCIDENT</div>
+        <div class="tab" id="tab-entity">ENTITY</div>
+      </div>
+      
+      <div class="panel-content" id="inspector-incident">
+        <div class="empty-state">NO ACTIVE INCIDENT</div>
+      </div>
+      
+      <div class="panel-content hidden" id="inspector-entity">
+        <div class="empty-state">NO ENTITY SELECTED</div>
+      </div>
+    </aside>
+  </div>
+
+  <!-- BOTTOM PANEL: Event Timeline -->
+  <footer class="bottom-panel">
+    <div class="panel-header" style="display:flex; justify-content:space-between; align-items:center;">
+      <span>EVENT TIMELINE</span>
+      <div id="timeline-filters" style="display:flex; gap: 8px;">
+        <button class="btn outline" style="padding:2px 8px; font-size:10px; margin:0;" onclick="setTimelineFilter('ALL')">ALL</button>
+        <button class="btn outline" style="padding:2px 8px; font-size:10px; margin:0; color:var(--accent-amber); border-color:var(--accent-amber);" onclick="setTimelineFilter('ALERT')">ALERTS</button>
+      </div>
+    </div>
+    <div class="timeline-container">
+      <div id="timeline-scrubber" class="timeline-scrubber"></div>
+      <div id="timeline-events" class="timeline-events">
+        <div class="empty-state">NO EVENTS LOADED</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Modal for Benchmark Results -->
+  <div id="benchmark-modal" class="modal hidden">
+    <div class="modal-content">
+      <div class="panel-header">BENCHMARK RESULTS <button class="close-btn" id="btn-close-bench">×</button></div>
+      <table id="bench-table" class="data-table">
+        <thead>
+          <tr><th>Scenario</th><th>Events</th><th>Path Found</th><th>Score</th><th>Confidence</th></tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </div>
+
+  <script src="/ui/app.js"></script>
+</body>
+</html>

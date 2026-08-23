@@ -1,0 +1,52 @@
+[
+  {
+    "scenario": "clean",
+    "input_events": 192,
+    "accepted_events": 192,
+    "duplicates_removed": 0,
+    "late_events": 0,
+    "path_found": true,
+    "score": 115.0,
+    "confidence": 85.0
+  },
+  {
+    "scenario": "missing_10",
+    "input_events": 169,
+    "accepted_events": 169,
+    "duplicates_removed": 0,
+    "late_events": 0,
+    "path_found": true,
+    "score": 115.0,
+    "confidence": 85.0
+  },
+  {
+    "scenario": "missing_20",
+    "input_events": 145,
+    "accepted_events": 145,
+    "duplicates_removed": 0,
+    "late_events": 0,
+    "path_found": true,
+    "score": 19.18,
+    "confidence": 58.18
+  },
+  {
+    "scenario": "delayed_8",
+    "input_events": 192,
+    "accepted_events": 192,
+    "duplicates_removed": 0,
+    "late_events": 0,
+    "path_found": true,
+    "score": 115.0,
+    "confidence": 85.0
+  },
+  {
+    "scenario": "duplicate_20",
+    "input_events": 233,
+    "accepted_events": 192,
+    "duplicates_removed": 41,
+    "late_events": 0,
+    "path_found": true,
+    "score": 115.0,
+    "confidence": 85.0
+  }
+]
