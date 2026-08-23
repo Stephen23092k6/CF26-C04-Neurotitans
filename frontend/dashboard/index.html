@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Neurobrain X - Command Center</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0b0f16;
+      --bg-panel: #101722;
+      --border: #1e2d40;
+      --text: #e2e8f0;
+      --text-muted: #94a3b8;
+      
+      --accent-blue: #32a8ff;
+      --accent-red: #ff3b5c;
+      --accent-amber: #ffae2b;
+      --accent-green: #10b981;
+    }
+    body {
+      margin: 0; padding: 20px;
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+    }
+    h1, h2, h3, h4 { margin: 0 0 10px 0; font-weight: 600; }
+    
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 24px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--border);
+    }
+    
+    .grid {
+      display: grid;
+      grid-template-columns: 300px 1fr 350px;
+      gap: 20px;
+      height: calc(100vh - 100px);
+    }
+    
+    .panel {
+      background: var(--bg-panel);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      overflow-y: auto;
+    }
+    
+    /* Risk Meter */
+    .risk-meter-container {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .risk-score {
+      font-size: 64px;
+      font-weight: 700;
+      margin: 10px 0;
+    }
+    .severity {
+      font-size: 18px;
+      font-weight: 600;
+      letter-spacing: 1px;
+    }
+    
+    /* MITRE Grid */
+    .mitre-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      gap: 12px;
+      margin-top: 16px;
+    }
+    .mitre-card {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid var(--border);
+      padding: 12px;
+      border-radius: 6px;
+    }
+    .mitre-id { color: var(--accent-blue); font-weight: 600; font-size: 14px;}
+    .mitre-name { font-size: 13px; margin-top: 4px; }
+    
+    /* Timeline */
+    .timeline {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .timeline-item {
+      display: flex;
+      border-left: 2px solid var(--accent-blue);
+      padding-left: 12px;
+      flex-direction: column;
+    }
+    .timeline-time { color: var(--text-muted); font-size: 12px; }
+    .timeline-event { font-weight: 500; font-size: 14px; margin-top: 4px; }
+    .timeline-nodes { color: var(--accent-amber); font-size: 12px; margin-top: 2px; }
+    
+    /* Copilot Q&A */
+    .qa-box {
+      background: rgba(255,255,255,0.03);
+      border-left: 3px solid var(--accent-blue);
+      padding: 12px;
+      margin-bottom: 12px;
+    }
+    .qa-q { font-weight: 600; font-size: 14px; margin-bottom: 6px; color: var(--accent-blue); }
+    .qa-a { font-size: 13px; line-height: 1.5; white-space: pre-line; }
+    
+    /* Responses */
+    .response-action {
+      background: rgba(255, 59, 92, 0.1);
+      border: 1px solid var(--accent-red);
+      color: var(--accent-red);
+      padding: 8px 12px;
+      border-radius: 4px;
+      font-size: 13px;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+    
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <h2>Neurobrain X <span style="color:var(--text-muted); font-weight:400;">| Command Center</span></h2>
+    <div>
+      <select id="scenario-select" style="padding: 6px; background:var(--bg-panel); color:white; border:1px solid var(--border);">
+        <option value="APT">APT Campaign</option>
+        <option value="INSIDER">Insider Threat</option>
+        <option value="RANSOMWARE">Ransomware</option>
+      </select>
+      <button id="btn-run" style="padding: 6px 12px; background:var(--accent-blue); color:white; border:none; border-radius:4px; cursor:pointer;">RUN INVESTIGATION</button>
+    </div>
+  </div>
+  
+  <div class="grid">
+    <!-- Left: Risk & Response -->
+    <div class="panel">
+      <h3>Enterprise Risk</h3>
+      <div class="risk-meter-container">
+        <div class="risk-score" id="ui-risk-score">--</div>
+        <div class="severity" id="ui-severity">PENDING</div>
+      </div>
+      
+      <h3 style="margin-top: 20px;">Response Engine</h3>
+      <div id="ui-responses"></div>
+    </div>
+    
+    <!-- Center: MITRE & Copilot -->
+    <div class="panel">
+      <h3>SOC Copilot</h3>
+      <div id="ui-copilot"></div>
+      
+      <h3 style="margin-top: 30px;">MITRE ATT&CK Intelligence</h3>
+      <div class="mitre-grid" id="ui-mitre"></div>
+    </div>
+    
+    <!-- Right: Timeline -->
+    <div class="panel">
+      <h3>Attack Timeline</h3>
+      <div class="timeline" id="ui-timeline"></div>
+    </div>
+  </div>
+
+  <script src="/ui/dashboard/dashboard.js"></script>
+</body>
+</html>
