@@ -2,29 +2,29 @@
   {
     "events": 100,
     "ingest_latency_s": 0.0,
-    "recon_latency_s": 0.0,
-    "total_runtime_s": 0.001,
-    "throughput_eps": 100000.0
+    "recon_latency_s": 0.0020232200622558594,
+    "total_runtime_s": 0.0020232200622558594,
+    "throughput_eps": 49426.160735328776
   },
   {
     "events": 1000,
-    "ingest_latency_s": 0.01667332649230957,
-    "recon_latency_s": 0.0,
-    "total_runtime_s": 0.01667332649230957,
-    "throughput_eps": 59976.03420416685
+    "ingest_latency_s": 0.004013776779174805,
+    "recon_latency_s": 0.0013113021850585938,
+    "total_runtime_s": 0.0053250789642333984,
+    "throughput_eps": 187790.64248936647
   },
   {
     "events": 5000,
-    "ingest_latency_s": 0.035470008850097656,
-    "recon_latency_s": 0.08791279792785645,
-    "total_runtime_s": 0.1233828067779541,
-    "throughput_eps": 40524.28478951894
+    "ingest_latency_s": 0.05222797393798828,
+    "recon_latency_s": 0.12643909454345703,
+    "total_runtime_s": 0.1786670684814453,
+    "throughput_eps": 27985.01168960106
   },
   {
     "events": 10000,
-    "ingest_latency_s": 0.0560455322265625,
-    "recon_latency_s": 0.37253665924072266,
-    "total_runtime_s": 0.42858219146728516,
-    "throughput_eps": 23332.7473681634
+    "ingest_latency_s": 0.04800915718078613,
+    "recon_latency_s": 0.49930644035339355,
+    "total_runtime_s": 0.5473155975341797,
+    "throughput_eps": 18270.99400246035
   }
 ]

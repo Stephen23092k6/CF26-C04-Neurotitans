@@ -10,6 +10,25 @@ const state = {
   sim: { loss: 0.2, delay: 4, dup: 0.1 }
 };
 
+// Global Controllers
+window.splineCtrl = new SplineController('spline-viewer');
+window.attackReplay = new AttackReplay((replayState) => {
+    // Forward replay state to Spline
+    if (window.splineCtrl) window.splineCtrl.updateReplayState(replayState);
+    
+    // Highlight timeline row in UI
+    $$('.event-row').forEach(row => row.classList.remove('highlighted-row'));
+    if (replayState.activeEvent) {
+        const rowId = `row-${replayState.activeEvent.event_id}`;
+        const row = document.getElementById(rowId);
+        if (row) {
+            row.classList.add('highlighted-row');
+            row.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+    }
+});
+let is3DMode = false;
+
 // Canvas Engine for 2D Fallback
 const canvas = $("#graph-canvas");
 const ctx = canvas.getContext("2d");
@@ -266,7 +285,11 @@ async function runBenchmark() {
 
 // UI Updating
 function updateUI() {
-  drawGraph();
+  if (is3DMode) {
+      if (window.splineCtrl) window.splineCtrl.updateState(state.graph, state.incident);
+  } else {
+      drawGraph();
+  }
   renderInspector();
   renderTimeline();
 }
@@ -390,7 +413,7 @@ function renderTimeline() {
     else if (e.severity >= 0.5) sevClass = 'med-sev';
     
     html += `
-      <div class="event-row ${sevClass}">
+      <div class="event-row ${sevClass}" id="row-${e.event_id}">
         <div>+${(e.event_time - state.graph.events[0].event_time).toFixed(1)}s</div>
         <div>${e.event_type}</div>
         <div>${e.source}</div>
@@ -428,6 +451,43 @@ $("#tab-entity").onclick = () => {
   $("#tab-entity").classList.add("active");
   $("#tab-incident").classList.remove("active");
   updateUI();
+};
+
+// 3D/2D Toggle
+$("#btn-toggle-3d").onclick = () => {
+  is3DMode = !is3DMode;
+  $("#btn-toggle-3d").textContent = is3DMode ? "SWITCH TO 2D CANVAS" : "SWITCH TO 3D SPLINE";
+  if (is3DMode) {
+      $("#graph-canvas").classList.add("hidden");
+      $("#spline-placeholder").classList.remove("hidden");
+  } else {
+      $("#graph-canvas").classList.remove("hidden");
+      $("#spline-placeholder").classList.add("hidden");
+  }
+  updateUI();
+};
+
+// Replay UI bindings
+$("#btn-replay-play").onclick = () => {
+    if (state.incident) {
+        if (window.attackReplay.events.length === 0) window.attackReplay.loadIncident(state.incident);
+        window.attackReplay.play();
+    }
+};
+$("#btn-replay-pause").onclick = () => window.attackReplay.pause();
+$("#btn-replay-next").onclick = () => window.attackReplay.next();
+$("#btn-replay-reset").onclick = () => window.attackReplay.reset();
+
+// Update Replay when new incident loads
+const origRunIncident = runIncident;
+runIncident = async () => {
+    await origRunIncident();
+    window.attackReplay.loadIncident(state.incident);
+};
+const origRunSimulate = runSimulate;
+runSimulate = async () => {
+    await origRunSimulate();
+    window.attackReplay.loadIncident(state.incident);
 };
 
 // Start

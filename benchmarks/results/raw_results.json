@@ -96,7 +96,7 @@
     "fpr": 0.0,
     "score": 57.58,
     "confidence": 74.58,
-    "latency": 0.0,
+    "latency": 0.004218578338623047,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 0
@@ -113,7 +113,7 @@
     "fpr": 0.0,
     "score": 0.0,
     "confidence": 0.0,
-    "latency": 0.0009899139404296875,
+    "latency": 0.0,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 0
@@ -130,7 +130,7 @@
     "fpr": 0.0,
     "score": 0.0,
     "confidence": 0.0,
-    "latency": 0.0009899139404296875,
+    "latency": 0.0,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 0
@@ -147,7 +147,7 @@
     "fpr": 0.0,
     "score": 100.0,
     "confidence": 85.0,
-    "latency": 0.0033330917358398438,
+    "latency": 0.0,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 0
@@ -164,7 +164,7 @@
     "fpr": 0.0,
     "score": 100.0,
     "confidence": 100.0,
-    "latency": 0.003856658935546875,
+    "latency": 0.0,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 0
@@ -181,7 +181,7 @@
     "fpr": 0.0,
     "score": 100.0,
     "confidence": 85.0,
-    "latency": 0.0022716522216796875,
+    "latency": 0.0011212825775146484,
     "inferred_gaps": 0,
     "late_events": 56,
     "duplicates_removed": 0
@@ -198,7 +198,7 @@
     "fpr": 0.0,
     "score": 100.0,
     "confidence": 100.0,
-    "latency": 0.0022716522216796875,
+    "latency": 0.0011212825775146484,
     "inferred_gaps": 0,
     "late_events": 56,
     "duplicates_removed": 0
@@ -215,7 +215,7 @@
     "fpr": 0.0,
     "score": 100.0,
     "confidence": 85.0,
-    "latency": 0.0,
+    "latency": 0.003191232681274414,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 76
@@ -232,7 +232,7 @@
     "fpr": 0.0,
     "score": 100.0,
     "confidence": 100.0,
-    "latency": 0.0,
+    "latency": 0.0016086101531982422,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 76
@@ -283,7 +283,7 @@
     "fpr": 0.0,
     "score": 100.0,
     "confidence": 85.0,
-    "latency": 0.0,
+    "latency": 0.002268552780151367,
     "inferred_gaps": 0,
     "late_events": 37,
     "duplicates_removed": 29
@@ -385,7 +385,7 @@
     "fpr": 0.0,
     "score": 0.0,
     "confidence": 0.0,
-    "latency": 0.002834320068359375,
+    "latency": 0.0,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 0
@@ -402,7 +402,7 @@
     "fpr": 0.0,
     "score": 0.0,
     "confidence": 0.0,
-    "latency": 0.002834320068359375,
+    "latency": 0.0,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 0
@@ -419,7 +419,7 @@
     "fpr": 0.0,
     "score": 82.67,
     "confidence": 74.67,
-    "latency": 0.0018622875213623047,
+    "latency": 0.012697935104370117,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 0
@@ -436,7 +436,7 @@
     "fpr": 0.0,
     "score": 100.0,
     "confidence": 100.0,
-    "latency": 0.0018622875213623047,
+    "latency": 0.0,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 0
@@ -606,7 +606,7 @@
     "fpr": 0.0,
     "score": 57.58,
     "confidence": 74.58,
-    "latency": 0.002218484878540039,
+    "latency": 0.0,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 0
@@ -623,7 +623,7 @@
     "fpr": 0.0,
     "score": 100.0,
     "confidence": 85.0,
-    "latency": 0.0019481182098388672,
+    "latency": 0.0,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 0
@@ -640,7 +640,7 @@
     "fpr": 0.0,
     "score": 100.0,
     "confidence": 100.0,
-    "latency": 0.0019481182098388672,
+    "latency": 0.0,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 0
@@ -657,7 +657,7 @@
     "fpr": 0.0,
     "score": 0.0,
     "confidence": 0.0,
-    "latency": 0.0012352466583251953,
+    "latency": 0.0,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 0
@@ -674,7 +674,7 @@
     "fpr": 0.0,
     "score": 0.0,
     "confidence": 0.0,
-    "latency": 0.0012352466583251953,
+    "latency": 0.0,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 0
@@ -708,7 +708,7 @@
     "fpr": 0.0,
     "score": 100.0,
     "confidence": 90.67,
-    "latency": 0.0046236515045166016,
+    "latency": 0.006533622741699219,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 0
@@ -725,7 +725,7 @@
     "fpr": 0.0,
     "score": 100.0,
     "confidence": 85.0,
-    "latency": 0.0005173683166503906,
+    "latency": 0.0,
     "inferred_gaps": 0,
     "late_events": 65,
     "duplicates_removed": 0
@@ -759,7 +759,7 @@
     "fpr": 0.0,
     "score": 100.0,
     "confidence": 93.93,
-    "latency": 0.002948760986328125,
+    "latency": 0.0,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 66
@@ -776,7 +776,7 @@
     "fpr": 0.0,
     "score": 100.0,
     "confidence": 100.0,
-    "latency": 0.002948760986328125,
+    "latency": 0.008054733276367188,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 66
@@ -1031,7 +1031,7 @@
     "fpr": 0.0,
     "score": 22.0,
     "confidence": 63.0,
-    "latency": 0.0,
+    "latency": 0.0006456375122070312,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 0
@@ -1048,7 +1048,7 @@
     "fpr": 0.0,
     "score": 52.0,
     "confidence": 93.0,
-    "latency": 0.0,
+    "latency": 0.0006456375122070312,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 0
@@ -1150,7 +1150,7 @@
     "fpr": 0.0,
     "score": 100.0,
     "confidence": 100.0,
-    "latency": 0.0007071495056152344,
+    "latency": 0.0,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 0
@@ -1167,7 +1167,7 @@
     "fpr": 0.0,
     "score": 72.6,
     "confidence": 76.6,
-    "latency": 0.002249002456665039,
+    "latency": 0.0,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 0
@@ -1184,7 +1184,7 @@
     "fpr": 0.0,
     "score": 87.6,
     "confidence": 91.6,
-    "latency": 0.002249002456665039,
+    "latency": 0.0,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 0
@@ -1269,7 +1269,7 @@
     "fpr": 0.0,
     "score": 100.0,
     "confidence": 96.29,
-    "latency": 0.006566762924194336,
+    "latency": 0.0,
     "inferred_gaps": 0,
     "late_events": 65,
     "duplicates_removed": 0
@@ -1286,7 +1286,7 @@
     "fpr": 0.0,
     "score": 100.0,
     "confidence": 100.0,
-    "latency": 0.006566762924194336,
+    "latency": 0.0,
     "inferred_gaps": 0,
     "late_events": 65,
     "duplicates_removed": 0
@@ -1303,7 +1303,7 @@
     "fpr": 0.0,
     "score": 100.0,
     "confidence": 85.0,
-    "latency": 0.002359628677368164,
+    "latency": 0.0,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 68
@@ -1405,7 +1405,7 @@
     "fpr": 0.0,
     "score": 85.92,
     "confidence": 73.92,
-    "latency": 0.006154298782348633,
+    "latency": 0.0,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 0
@@ -1422,7 +1422,7 @@
     "fpr": 0.0,
     "score": 100.0,
     "confidence": 88.92,
-    "latency": 0.006154298782348633,
+    "latency": 0.0,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 0
@@ -1592,7 +1592,7 @@
     "fpr": 0.0,
     "score": 52.0,
     "confidence": 93.0,
-    "latency": 0.0021119117736816406,
+    "latency": 0.0,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 0
@@ -1626,7 +1626,7 @@
     "fpr": 0.0,
     "score": 58.0,
     "confidence": 93.0,
-    "latency": 0.0015444755554199219,
+    "latency": 0.0,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 0
@@ -1643,7 +1643,7 @@
     "fpr": 0.0,
     "score": 100.0,
     "confidence": 85.0,
-    "latency": 0.0031206607818603516,
+    "latency": 0.0,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 0
@@ -1677,7 +1677,7 @@
     "fpr": 0.0,
     "score": 100.0,
     "confidence": 85.0,
-    "latency": 0.0041484832763671875,
+    "latency": 0.0,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 0
@@ -1694,7 +1694,7 @@
     "fpr": 0.0,
     "score": 100.0,
     "confidence": 100.0,
-    "latency": 0.0025873184204101562,
+    "latency": 0.0,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 0
@@ -1745,7 +1745,7 @@
     "fpr": 0.0,
     "score": 100.0,
     "confidence": 86.39,
-    "latency": 0.0,
+    "latency": 0.0010592937469482422,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 0
@@ -1762,7 +1762,7 @@
     "fpr": 0.0,
     "score": 100.0,
     "confidence": 100.0,
-    "latency": 0.0,
+    "latency": 0.0010592937469482422,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 0
@@ -1779,7 +1779,7 @@
     "fpr": 0.0,
     "score": 100.0,
     "confidence": 85.0,
-    "latency": 0.0020208358764648438,
+    "latency": 0.0010499954223632812,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 0
@@ -1796,7 +1796,7 @@
     "fpr": 0.0,
     "score": 100.0,
     "confidence": 100.0,
-    "latency": 0.0020208358764648438,
+    "latency": 0.0010499954223632812,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 0
@@ -1915,7 +1915,7 @@
     "fpr": 0.0,
     "score": 68.48,
     "confidence": 72.47999999999999,
-    "latency": 0.0009286403656005859,
+    "latency": 0.0,
     "inferred_gaps": 0,
     "late_events": 28,
     "duplicates_removed": 29
@@ -1932,7 +1932,7 @@
     "fpr": 0.0,
     "score": 83.47999999999999,
     "confidence": 87.48,
-    "latency": 0.0009286403656005859,
+    "latency": 0.0,
     "inferred_gaps": 0,
     "late_events": 28,
     "duplicates_removed": 29
@@ -1983,7 +1983,7 @@
     "fpr": 0.0,
     "score": 21.4,
     "confidence": 60.4,
-    "latency": 0.006044149398803711,
+    "latency": 0.0,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 0
@@ -2000,7 +2000,7 @@
     "fpr": 0.0,
     "score": 36.4,
     "confidence": 75.4,
-    "latency": 0.006044149398803711,
+    "latency": 0.0,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 0
@@ -2017,7 +2017,7 @@
     "fpr": 0.0,
     "score": 0.0,
     "confidence": 0.0,
-    "latency": 0.002971649169921875,
+    "latency": 0.016018390655517578,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 0
@@ -2034,7 +2034,7 @@
     "fpr": 0.0,
     "score": 0.0,
     "confidence": 0.0,
-    "latency": 0.002971649169921875,
+    "latency": 0.016018390655517578,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 0
@@ -2255,7 +2255,7 @@
     "fpr": 0.0,
     "score": 64.4,
     "confidence": 68.4,
-    "latency": 0.005166769027709961,
+    "latency": 0.01606130599975586,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 0
@@ -2272,7 +2272,7 @@
     "fpr": 0.0,
     "score": 79.4,
     "confidence": 83.4,
-    "latency": 0.005166769027709961,
+    "latency": 0.01606130599975586,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 0
@@ -2289,7 +2289,7 @@
     "fpr": 0.0,
     "score": 0.0,
     "confidence": 0.0,
-    "latency": 0.0010142326354980469,
+    "latency": 0.0,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 0
@@ -2306,7 +2306,7 @@
     "fpr": 0.0,
     "score": 0.0,
     "confidence": 0.0,
-    "latency": 0.0010142326354980469,
+    "latency": 0.0,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 0
@@ -2323,7 +2323,7 @@
     "fpr": 0.0,
     "score": 100.0,
     "confidence": 85.0,
-    "latency": 0.0020513534545898438,
+    "latency": 0.0,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 0
@@ -2340,7 +2340,7 @@
     "fpr": 0.0,
     "score": 100.0,
     "confidence": 100.0,
-    "latency": 0.0020513534545898438,
+    "latency": 0.0,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 0
@@ -2408,7 +2408,7 @@
     "fpr": 0.0,
     "score": 100.0,
     "confidence": 100.0,
-    "latency": 0.0010559558868408203,
+    "latency": 0.0,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 76
@@ -2527,7 +2527,7 @@
     "fpr": 0.0,
     "score": 0.0,
     "confidence": 0.0,
-    "latency": 0.008043289184570312,
+    "latency": 0.0,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 0
@@ -2544,7 +2544,7 @@
     "fpr": 0.0,
     "score": 0.0,
     "confidence": 0.0,
-    "latency": 0.008043289184570312,
+    "latency": 0.0,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 0
@@ -2680,7 +2680,7 @@
     "fpr": 0.0,
     "score": 52.0,
     "confidence": 93.0,
-    "latency": 0.0,
+    "latency": 0.0015912055969238281,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 0
@@ -2714,7 +2714,7 @@
     "fpr": 0.0,
     "score": 58.0,
     "confidence": 93.0,
-    "latency": 0.0,
+    "latency": 0.0015902519226074219,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 0
@@ -2765,7 +2765,7 @@
     "fpr": 0.0,
     "score": 12.45,
     "confidence": 51.45,
-    "latency": 0.0,
+    "latency": 0.0015876293182373047,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 0
@@ -2782,7 +2782,7 @@
     "fpr": 0.0,
     "score": 12.45,
     "confidence": 51.45,
-    "latency": 0.0,
+    "latency": 0.003170490264892578,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 0
@@ -2901,7 +2901,7 @@
     "fpr": 0.0,
     "score": 100.0,
     "confidence": 85.0,
-    "latency": 0.0003752708435058594,
+    "latency": 0.0,
     "inferred_gaps": 0,
     "late_events": 61,
     "duplicates_removed": 0
@@ -2935,7 +2935,7 @@
     "fpr": 0.0,
     "score": 100.0,
     "confidence": 85.0,
-    "latency": 0.0013508796691894531,
+    "latency": 0.0031747817993164062,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 76
@@ -2952,7 +2952,7 @@
     "fpr": 0.0,
     "score": 100.0,
     "confidence": 100.0,
-    "latency": 0.0013508796691894531,
+    "latency": 0.0031747817993164062,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 76
@@ -2969,7 +2969,7 @@
     "fpr": 0.0,
     "score": 100.0,
     "confidence": 85.0,
-    "latency": 0.0,
+    "latency": 0.0014545917510986328,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 18
@@ -2986,7 +2986,7 @@
     "fpr": 0.0,
     "score": 100.0,
     "confidence": 100.0,
-    "latency": 0.0,
+    "latency": 0.0014545917510986328,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 18
@@ -3003,7 +3003,7 @@
     "fpr": 0.0,
     "score": 0.0,
     "confidence": 0.0,
-    "latency": 0.0015287399291992188,
+    "latency": 0.0,
     "inferred_gaps": 0,
     "late_events": 39,
     "duplicates_removed": 36
@@ -3020,7 +3020,7 @@
     "fpr": 0.0,
     "score": 0.0,
     "confidence": 0.0,
-    "latency": 0.0015287399291992188,
+    "latency": 0.0,
     "inferred_gaps": 0,
     "late_events": 39,
     "duplicates_removed": 36
@@ -3037,7 +3037,7 @@
     "fpr": 0.0,
     "score": 100.0,
     "confidence": 85.0,
-    "latency": 0.001531839370727539,
+    "latency": 0.008172750473022461,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 0
@@ -3054,7 +3054,7 @@
     "fpr": 0.0,
     "score": 100.0,
     "confidence": 100.0,
-    "latency": 0.001531839370727539,
+    "latency": 0.007003307342529297,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 0
@@ -3105,7 +3105,7 @@
     "fpr": 0.0,
     "score": 0.0,
     "confidence": 0.0,
-    "latency": 0.0,
+    "latency": 0.0005829334259033203,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 0
@@ -3122,7 +3122,7 @@
     "fpr": 0.0,
     "score": 0.0,
     "confidence": 0.0,
-    "latency": 0.0,
+    "latency": 0.0005829334259033203,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 0
@@ -3275,7 +3275,7 @@
     "fpr": 0.0,
     "score": 100.0,
     "confidence": 85.0,
-    "latency": 0.0,
+    "latency": 0.0005066394805908203,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 0
@@ -3292,7 +3292,7 @@
     "fpr": 0.0,
     "score": 100.0,
     "confidence": 100.0,
-    "latency": 0.0,
+    "latency": 0.0005066394805908203,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 0
@@ -3411,7 +3411,7 @@
     "fpr": 0.0,
     "score": 100.0,
     "confidence": 93.93,
-    "latency": 0.007460355758666992,
+    "latency": 0.002178668975830078,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 0
@@ -3428,7 +3428,7 @@
     "fpr": 0.0,
     "score": 100.0,
     "confidence": 100.0,
-    "latency": 0.007460355758666992,
+    "latency": 0.0041959285736083984,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 0
@@ -3445,7 +3445,7 @@
     "fpr": 0.0,
     "score": 100.0,
     "confidence": 85.0,
-    "latency": 0.0,
+    "latency": 0.0020134449005126953,
     "inferred_gaps": 0,
     "late_events": 63,
     "duplicates_removed": 0
@@ -3462,7 +3462,7 @@
     "fpr": 0.0,
     "score": 100.0,
     "confidence": 100.0,
-    "latency": 0.0,
+    "latency": 0.0020134449005126953,
     "inferred_gaps": 0,
     "late_events": 63,
     "duplicates_removed": 0
@@ -3530,7 +3530,7 @@
     "fpr": 0.0,
     "score": 100.0,
     "confidence": 100.0,
-    "latency": 0.0014615058898925781,
+    "latency": 0.0,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 18
@@ -3564,7 +3564,7 @@
     "fpr": 0.0,
     "score": 100.0,
     "confidence": 100.0,
-    "latency": 0.0010678768157958984,
+    "latency": 0.0,
     "inferred_gaps": 0,
     "late_events": 36,
     "duplicates_removed": 31
@@ -3581,7 +3581,7 @@
     "fpr": 0.0,
     "score": 100.0,
     "confidence": 85.0,
-    "latency": 0.0026161670684814453,
+    "latency": 0.0,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 0
@@ -3598,7 +3598,7 @@
     "fpr": 0.0,
     "score": 100.0,
     "confidence": 100.0,
-    "latency": 0.0026161670684814453,
+    "latency": 0.0,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 0
@@ -3649,7 +3649,7 @@
     "fpr": 0.0,
     "score": 0.0,
     "confidence": 0.0,
-    "latency": 0.0,
+    "latency": 0.012045860290527344,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 0
@@ -3666,7 +3666,7 @@
     "fpr": 0.0,
     "score": 0.0,
     "confidence": 0.0,
-    "latency": 0.0,
+    "latency": 0.012045860290527344,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 0
@@ -3683,7 +3683,7 @@
     "fpr": 0.0,
     "score": 82.67,
     "confidence": 74.67,
-    "latency": 0.0005121231079101562,
+    "latency": 0.0,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 0
@@ -3700,7 +3700,7 @@
     "fpr": 0.0,
     "score": 100.0,
     "confidence": 100.0,
-    "latency": 0.0005121231079101562,
+    "latency": 0.0,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 0
@@ -3768,7 +3768,7 @@
     "fpr": 0.0,
     "score": 52.0,
     "confidence": 93.0,
-    "latency": 0.0039017200469970703,
+    "latency": 0.0,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 0
@@ -3785,7 +3785,7 @@
     "fpr": 0.0,
     "score": 83.83,
     "confidence": 73.83,
-    "latency": 0.0013267993927001953,
+    "latency": 0.0,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 0
@@ -3802,7 +3802,7 @@
     "fpr": 0.0,
     "score": 58.0,
     "confidence": 93.0,
-    "latency": 0.0013267993927001953,
+    "latency": 0.0,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 0
@@ -3955,7 +3955,7 @@
     "fpr": 0.0,
     "score": 100.0,
     "confidence": 85.0,
-    "latency": 0.0010578632354736328,
+    "latency": 0.0,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 0
@@ -3972,7 +3972,7 @@
     "fpr": 0.0,
     "score": 100.0,
     "confidence": 100.0,
-    "latency": 0.0010578632354736328,
+    "latency": 0.0,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 0
@@ -4057,7 +4057,7 @@
     "fpr": 0.0,
     "score": 100.0,
     "confidence": 85.0,
-    "latency": 0.0010364055633544922,
+    "latency": 0.0,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 11
@@ -4125,7 +4125,7 @@
     "fpr": 0.0,
     "score": 100.0,
     "confidence": 85.0,
-    "latency": 0.0,
+    "latency": 0.002017974853515625,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 0
@@ -4142,7 +4142,7 @@
     "fpr": 0.0,
     "score": 100.0,
     "confidence": 100.0,
-    "latency": 0.0,
+    "latency": 0.002017974853515625,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 0
@@ -4159,7 +4159,7 @@
     "fpr": 0.0,
     "score": 0.0,
     "confidence": 0.0,
-    "latency": 0.0014636516571044922,
+    "latency": 0.0,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 0
@@ -4176,7 +4176,7 @@
     "fpr": 0.0,
     "score": 0.0,
     "confidence": 0.0,
-    "latency": 0.0014636516571044922,
+    "latency": 0.0,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 0
@@ -4193,7 +4193,7 @@
     "fpr": 0.0,
     "score": 73.97,
     "confidence": 77.97,
-    "latency": 0.002927064895629883,
+    "latency": 0.013891220092773438,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 0
@@ -4210,7 +4210,7 @@
     "fpr": 0.0,
     "score": 88.97,
     "confidence": 92.97,
-    "latency": 0.002927064895629883,
+    "latency": 0.013891220092773438,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 0
@@ -4227,7 +4227,7 @@
     "fpr": 0.0,
     "score": 82.67,
     "confidence": 74.67,
-    "latency": 0.0006673336029052734,
+    "latency": 0.0,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 0
@@ -4295,7 +4295,7 @@
     "fpr": 0.0,
     "score": 22.0,
     "confidence": 63.0,
-    "latency": 0.001672506332397461,
+    "latency": 0.0,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 0
@@ -4312,7 +4312,7 @@
     "fpr": 0.0,
     "score": 52.0,
     "confidence": 93.0,
-    "latency": 0.001672506332397461,
+    "latency": 0.0,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 0
@@ -4397,7 +4397,7 @@
     "fpr": 0.0,
     "score": 67.32,
     "confidence": 71.32,
-    "latency": 0.010629892349243164,
+    "latency": 0.014557600021362305,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 0
@@ -4414,7 +4414,7 @@
     "fpr": 0.0,
     "score": 82.32,
     "confidence": 86.32,
-    "latency": 0.00038886070251464844,
+    "latency": 0.014557600021362305,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 0
@@ -4431,7 +4431,7 @@
     "fpr": 0.0,
     "score": 73.97,
     "confidence": 77.97,
-    "latency": 0.0005104541778564453,
+    "latency": 0.0,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 0
@@ -4448,7 +4448,7 @@
     "fpr": 0.0,
     "score": 88.97,
     "confidence": 92.97,
-    "latency": 0.0005104541778564453,
+    "latency": 0.0,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 0
@@ -4567,7 +4567,7 @@
     "fpr": 0.0,
     "score": 100.0,
     "confidence": 85.0,
-    "latency": 0.0020470619201660156,
+    "latency": 0.0,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 80
@@ -4584,7 +4584,7 @@
     "fpr": 0.0,
     "score": 100.0,
     "confidence": 100.0,
-    "latency": 0.0020470619201660156,
+    "latency": 0.0,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 80
@@ -4601,7 +4601,7 @@
     "fpr": 0.0,
     "score": 71.87,
     "confidence": 75.87,
-    "latency": 0.0020143985748291016,
+    "latency": 0.0,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 24
@@ -4618,7 +4618,7 @@
     "fpr": 0.0,
     "score": 86.87,
     "confidence": 90.87,
-    "latency": 0.0020143985748291016,
+    "latency": 0.0,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 24
@@ -4669,7 +4669,7 @@
     "fpr": 0.0,
     "score": 100.0,
     "confidence": 85.0,
-    "latency": 0.0,
+    "latency": 0.013348817825317383,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 0
@@ -4686,7 +4686,7 @@
     "fpr": 0.0,
     "score": 100.0,
     "confidence": 100.0,
-    "latency": 0.0,
+    "latency": 0.014410972595214844,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 0
@@ -4703,7 +4703,7 @@
     "fpr": 0.0,
     "score": 16.15,
     "confidence": 55.15,
-    "latency": 0.0,
+    "latency": 0.0010669231414794922,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 0
@@ -4720,7 +4720,7 @@
     "fpr": 0.0,
     "score": 31.15,
     "confidence": 70.15,
-    "latency": 0.0007581710815429688,
+    "latency": 0.0010669231414794922,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 0
@@ -4737,7 +4737,7 @@
     "fpr": 0.0,
     "score": 70.82,
     "confidence": 74.82,
-    "latency": 0.0017066001892089844,
+    "latency": 0.0,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 0
@@ -4754,7 +4754,7 @@
     "fpr": 0.0,
     "score": 85.82,
     "confidence": 89.82,
-    "latency": 0.0017066001892089844,
+    "latency": 0.0,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 0
@@ -4907,7 +4907,7 @@
     "fpr": 0.0,
     "score": 100.0,
     "confidence": 85.0,
-    "latency": 0.0007202625274658203,
+    "latency": 0.0,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 0
@@ -4924,7 +4924,7 @@
     "fpr": 0.0,
     "score": 100.0,
     "confidence": 100.0,
-    "latency": 0.0007202625274658203,
+    "latency": 0.0,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 0
@@ -4975,7 +4975,7 @@
     "fpr": 0.0,
     "score": 100.0,
     "confidence": 86.39,
-    "latency": 0.0,
+    "latency": 0.013576745986938477,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 0
@@ -4992,7 +4992,7 @@
     "fpr": 0.0,
     "score": 100.0,
     "confidence": 100.0,
-    "latency": 0.0,
+    "latency": 0.0003542900085449219,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 0
@@ -5043,7 +5043,7 @@
     "fpr": 0.0,
     "score": 100.0,
     "confidence": 85.0,
-    "latency": 0.0007128715515136719,
+    "latency": 0.0,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 0
@@ -5060,7 +5060,7 @@
     "fpr": 0.0,
     "score": 100.0,
     "confidence": 100.0,
-    "latency": 0.0028388500213623047,
+    "latency": 0.0,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 0
@@ -5111,7 +5111,7 @@
     "fpr": 0.0,
     "score": 100.0,
     "confidence": 85.0,
-    "latency": 0.0,
+    "latency": 0.0021228790283203125,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 68
@@ -5128,7 +5128,7 @@
     "fpr": 0.0,
     "score": 100.0,
     "confidence": 100.0,
-    "latency": 0.0,
+    "latency": 0.0021228790283203125,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 68
@@ -5145,7 +5145,7 @@
     "fpr": 0.0,
     "score": 65.68,
     "confidence": 69.68,
-    "latency": 0.0,
+    "latency": 0.004717111587524414,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 19
@@ -5162,7 +5162,7 @@
     "fpr": 0.0,
     "score": 80.68,
     "confidence": 84.68,
-    "latency": 0.0,
+    "latency": 0.004717111587524414,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 19
@@ -5179,7 +5179,7 @@
     "fpr": 0.0,
     "score": 0.0,
     "confidence": 0.0,
-    "latency": 0.001836538314819336,
+    "latency": 0.0020291805267333984,
     "inferred_gaps": 0,
     "late_events": 31,
     "duplicates_removed": 26
@@ -5196,7 +5196,7 @@
     "fpr": 0.0,
     "score": 0.0,
     "confidence": 0.0,
-    "latency": 0.001836538314819336,
+    "latency": 0.0020291805267333984,
     "inferred_gaps": 0,
     "late_events": 31,
     "duplicates_removed": 26
@@ -5230,7 +5230,7 @@
     "fpr": 0.0,
     "score": 100.0,
     "confidence": 100.0,
-    "latency": 0.0,
+    "latency": 0.0020198822021484375,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 0
@@ -5281,7 +5281,7 @@
     "fpr": 0.0,
     "score": 0.0,
     "confidence": 0.0,
-    "latency": 0.0005185604095458984,
+    "latency": 0.0005116462707519531,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 0
@@ -5298,7 +5298,7 @@
     "fpr": 0.0,
     "score": 0.0,
     "confidence": 0.0,
-    "latency": 0.0,
+    "latency": 0.0005116462707519531,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 0
@@ -5383,7 +5383,7 @@
     "fpr": 0.0,
     "score": 22.0,
     "confidence": 63.0,
-    "latency": 0.001050710678100586,
+    "latency": 0.0,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 0
@@ -5400,7 +5400,7 @@
     "fpr": 0.0,
     "score": 52.0,
     "confidence": 93.0,
-    "latency": 0.001050710678100586,
+    "latency": 0.0,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 0
@@ -5417,7 +5417,7 @@
     "fpr": 0.0,
     "score": 83.83,
     "confidence": 73.83,
-    "latency": 0.002016782760620117,
+    "latency": 0.0,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 0
@@ -5434,7 +5434,7 @@
     "fpr": 0.0,
     "score": 58.0,
     "confidence": 93.0,
-    "latency": 0.002016782760620117,
+    "latency": 0.002016305923461914,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 0
@@ -5451,7 +5451,7 @@
     "fpr": 0.0,
     "score": 100.0,
     "confidence": 85.0,
-    "latency": 0.0039196014404296875,
+    "latency": 0.0,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 0
@@ -5468,7 +5468,7 @@
     "fpr": 0.0,
     "score": 100.0,
     "confidence": 100.0,
-    "latency": 0.0026018619537353516,
+    "latency": 0.0,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 0
@@ -5485,7 +5485,7 @@
     "fpr": 0.0,
     "score": 100.0,
     "confidence": 85.0,
-    "latency": 0.001245737075805664,
+    "latency": 0.0017294883728027344,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 0
@@ -5502,7 +5502,7 @@
     "fpr": 0.0,
     "score": 100.0,
     "confidence": 100.0,
-    "latency": 0.001245737075805664,
+    "latency": 0.002939462661743164,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 0
@@ -5519,7 +5519,7 @@
     "fpr": 0.0,
     "score": 10.43,
     "confidence": 49.43,
-    "latency": 0.0,
+    "latency": 0.00036454200744628906,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 0
@@ -5536,7 +5536,7 @@
     "fpr": 0.0,
     "score": 25.43,
     "confidence": 64.43,
-    "latency": 0.0,
+    "latency": 0.0004642009735107422,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 0
@@ -5587,7 +5587,7 @@
     "fpr": 0.0,
     "score": 100.0,
     "confidence": 85.0,
-    "latency": 0.0009653568267822266,
+    "latency": 0.001176595687866211,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 0
@@ -5604,7 +5604,7 @@
     "fpr": 0.0,
     "score": 100.0,
     "confidence": 100.0,
-    "latency": 0.0028362274169921875,
+    "latency": 0.001176595687866211,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 0
@@ -5621,7 +5621,7 @@
     "fpr": 0.0,
     "score": 100.0,
     "confidence": 85.0,
-    "latency": 0.002545595169067383,
+    "latency": 0.0,
     "inferred_gaps": 0,
     "late_events": 53,
     "duplicates_removed": 0
@@ -5638,7 +5638,7 @@
     "fpr": 0.0,
     "score": 100.0,
     "confidence": 85.0,
-    "latency": 0.002545595169067383,
+    "latency": 0.0,
     "inferred_gaps": 0,
     "late_events": 53,
     "duplicates_removed": 0
@@ -5655,7 +5655,7 @@
     "fpr": 0.0,
     "score": 100.0,
     "confidence": 85.0,
-    "latency": 0.0,
+    "latency": 0.001299142837524414,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 75
@@ -5672,7 +5672,7 @@
     "fpr": 0.0,
     "score": 100.0,
     "confidence": 100.0,
-    "latency": 0.0,
+    "latency": 0.0019986629486083984,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 75
@@ -5689,7 +5689,7 @@
     "fpr": 0.0,
     "score": 100.0,
     "confidence": 85.0,
-    "latency": 0.0006215572357177734,
+    "latency": 0.002309083938598633,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 19
@@ -5706,7 +5706,7 @@
     "fpr": 0.0,
     "score": 100.0,
     "confidence": 100.0,
-    "latency": 0.0006215572357177734,
+    "latency": 0.0038652420043945312,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 19
@@ -5723,7 +5723,7 @@
     "fpr": 0.0,
     "score": 0.0,
     "confidence": 0.0,
-    "latency": 0.003260374069213867,
+    "latency": 0.0020742416381835938,
     "inferred_gaps": 0,
     "late_events": 30,
     "duplicates_removed": 30
@@ -5740,7 +5740,7 @@
     "fpr": 0.0,
     "score": 0.0,
     "confidence": 0.0,
-    "latency": 0.003260374069213867,
+    "latency": 0.0020742416381835938,
     "inferred_gaps": 0,
     "late_events": 30,
     "duplicates_removed": 30
@@ -5757,7 +5757,7 @@
     "fpr": 0.0,
     "score": 85.92,
     "confidence": 73.92,
-    "latency": 0.0,
+    "latency": 0.0016317367553710938,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 0
@@ -5774,7 +5774,7 @@
     "fpr": 0.0,
     "score": 100.0,
     "confidence": 88.92,
-    "latency": 0.0,
+    "latency": 0.003236055374145508,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 0
@@ -5791,7 +5791,7 @@
     "fpr": 0.0,
     "score": 20.34,
     "confidence": 63.34,
-    "latency": 0.0,
+    "latency": 0.0007948875427246094,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 0
@@ -5808,7 +5808,7 @@
     "fpr": 0.0,
     "score": 35.34,
     "confidence": 78.34,
-    "latency": 0.0,
+    "latency": 0.0007948875427246094,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 0
@@ -5825,7 +5825,7 @@
     "fpr": 0.0,
     "score": 0.0,
     "confidence": 0.0,
-    "latency": 0.0007164478302001953,
+    "latency": 0.0,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 0
@@ -5842,7 +5842,7 @@
     "fpr": 0.0,
     "score": 0.0,
     "confidence": 0.0,
-    "latency": 0.0007164478302001953,
+    "latency": 0.0,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 0
@@ -5859,7 +5859,7 @@
     "fpr": 0.0,
     "score": 82.67,
     "confidence": 74.67,
-    "latency": 0.0013320446014404297,
+    "latency": 0.0013248920440673828,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 0
@@ -5876,7 +5876,7 @@
     "fpr": 0.0,
     "score": 100.0,
     "confidence": 100.0,
-    "latency": 0.0013320446014404297,
+    "latency": 0.0013248920440673828,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 0
@@ -5927,7 +5927,7 @@
     "fpr": 0.0,
     "score": 22.0,
     "confidence": 63.0,
-    "latency": 0.0026171207427978516,
+    "latency": 0.0,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 0
@@ -5944,7 +5944,7 @@
     "fpr": 0.0,
     "score": 52.0,
     "confidence": 93.0,
-    "latency": 0.0026171207427978516,
+    "latency": 0.0,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 0
@@ -5995,7 +5995,7 @@
     "fpr": 0.0,
     "score": 100.0,
     "confidence": 85.0,
-    "latency": 0.0,
+    "latency": 0.0030622482299804688,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 0
@@ -6063,7 +6063,7 @@
     "fpr": 0.0,
     "score": 100.0,
     "confidence": 85.0,
-    "latency": 0.0006442070007324219,
+    "latency": 0.002167224884033203,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 0
@@ -6080,7 +6080,7 @@
     "fpr": 0.0,
     "score": 100.0,
     "confidence": 100.0,
-    "latency": 0.0,
+    "latency": 0.0009860992431640625,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 0
@@ -6097,7 +6097,7 @@
     "fpr": 0.0,
     "score": 16.27,
     "confidence": 55.27,
-    "latency": 0.0020558834075927734,
+    "latency": 0.0,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 0
@@ -6114,7 +6114,7 @@
     "fpr": 0.0,
     "score": 31.27,
     "confidence": 70.27,
-    "latency": 0.0020558834075927734,
+    "latency": 0.0,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 0
@@ -6131,7 +6131,7 @@
     "fpr": 0.0,
     "score": 100.0,
     "confidence": 85.0,
-    "latency": 0.0015268325805664062,
+    "latency": 0.0047740936279296875,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 0
@@ -6148,7 +6148,7 @@
     "fpr": 0.0,
     "score": 100.0,
     "confidence": 100.0,
-    "latency": 0.0015268325805664062,
+    "latency": 0.0047740936279296875,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 0
@@ -6216,7 +6216,7 @@
     "fpr": 0.0,
     "score": 100.0,
     "confidence": 100.0,
-    "latency": 0.0023314952850341797,
+    "latency": 0.0,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 83
@@ -6233,7 +6233,7 @@
     "fpr": 0.0,
     "score": 67.9,
     "confidence": 71.9,
-    "latency": 0.0023717880249023438,
+    "latency": 0.0,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 15
@@ -6250,7 +6250,7 @@
     "fpr": 0.0,
     "score": 82.9,
     "confidence": 86.9,
-    "latency": 0.0023717880249023438,
+    "latency": 0.0,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 15
@@ -6301,7 +6301,7 @@
     "fpr": 0.0,
     "score": 100.0,
     "confidence": 85.0,
-    "latency": 0.007505893707275391,
+    "latency": 0.0,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 0
@@ -6318,7 +6318,7 @@
     "fpr": 0.0,
     "score": 100.0,
     "confidence": 85.0,
-    "latency": 0.007505893707275391,
+    "latency": 0.0,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 0
@@ -6335,7 +6335,7 @@
     "fpr": 0.0,
     "score": 22.68,
     "confidence": 61.68,
-    "latency": 0.0015561580657958984,
+    "latency": 0.0020198822021484375,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 0
@@ -6352,7 +6352,7 @@
     "fpr": 0.0,
     "score": 37.68,
     "confidence": 76.68,
-    "latency": 0.0015561580657958984,
+    "latency": 0.0020198822021484375,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 0
@@ -6369,7 +6369,7 @@
     "fpr": 0.0,
     "score": 21.4,
     "confidence": 60.4,
-    "latency": 0.0017864704132080078,
+    "latency": 0.002025604248046875,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 0
@@ -6386,7 +6386,7 @@
     "fpr": 0.0,
     "score": 36.4,
     "confidence": 75.4,
-    "latency": 0.0017864704132080078,
+    "latency": 0.002025604248046875,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 0
@@ -6539,7 +6539,7 @@
     "fpr": 0.0,
     "score": 100.0,
     "confidence": 85.0,
-    "latency": 0.0016245841979980469,
+    "latency": 0.0020210742950439453,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 0
@@ -6556,7 +6556,7 @@
     "fpr": 0.0,
     "score": 100.0,
     "confidence": 100.0,
-    "latency": 0.0016245841979980469,
+    "latency": 0.0020210742950439453,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 0
@@ -6573,7 +6573,7 @@
     "fpr": 0.0,
     "score": 100.0,
     "confidence": 85.0,
-    "latency": 0.0022056102752685547,
+    "latency": 0.0020122528076171875,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 0
@@ -6590,7 +6590,7 @@
     "fpr": 0.0,
     "score": 100.0,
     "confidence": 100.0,
-    "latency": 0.0022056102752685547,
+    "latency": 0.0020122528076171875,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 0
@@ -6624,7 +6624,7 @@
     "fpr": 0.0,
     "score": 100.0,
     "confidence": 100.0,
-    "latency": 0.0020151138305664062,
+    "latency": 0.0,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 0
@@ -6641,7 +6641,7 @@
     "fpr": 0.0,
     "score": 100.0,
     "confidence": 85.0,
-    "latency": 0.002009868621826172,
+    "latency": 0.0,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 0
@@ -6658,7 +6658,7 @@
     "fpr": 0.0,
     "score": 100.0,
     "confidence": 100.0,
-    "latency": 0.002009868621826172,
+    "latency": 0.0,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 0
@@ -6675,7 +6675,7 @@
     "fpr": 0.0,
     "score": 100.0,
     "confidence": 85.0,
-    "latency": 0.0020346641540527344,
+    "latency": 0.0,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 0
@@ -6692,7 +6692,7 @@
     "fpr": 0.0,
     "score": 100.0,
     "confidence": 100.0,
-    "latency": 0.0020346641540527344,
+    "latency": 0.0,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 0
@@ -6709,7 +6709,7 @@
     "fpr": 0.0,
     "score": 100.0,
     "confidence": 85.0,
-    "latency": 0.0,
+    "latency": 0.004025459289550781,
     "inferred_gaps": 0,
     "late_events": 62,
     "duplicates_removed": 0
@@ -6726,7 +6726,7 @@
     "fpr": 0.0,
     "score": 100.0,
     "confidence": 100.0,
-    "latency": 0.0,
+    "latency": 0.002009153366088867,
     "inferred_gaps": 0,
     "late_events": 62,
     "duplicates_removed": 0
@@ -6777,7 +6777,7 @@
     "fpr": 0.0,
     "score": 24.0,
     "confidence": 63.0,
-    "latency": 0.0,
+    "latency": 0.0020101070404052734,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 14
@@ -6794,7 +6794,7 @@
     "fpr": 0.0,
     "score": 39.0,
     "confidence": 78.0,
-    "latency": 0.0,
+    "latency": 0.0037620067596435547,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 14
@@ -6811,7 +6811,7 @@
     "fpr": 0.0,
     "score": 29.31,
     "confidence": 76.31,
-    "latency": 0.0,
+    "latency": 0.001138448715209961,
     "inferred_gaps": 0,
     "late_events": 28,
     "duplicates_removed": 26
@@ -6828,7 +6828,7 @@
     "fpr": 0.0,
     "score": 44.31,
     "confidence": 91.31,
-    "latency": 0.0,
+    "latency": 0.001138448715209961,
     "inferred_gaps": 0,
     "late_events": 28,
     "duplicates_removed": 26
@@ -6879,7 +6879,7 @@
     "fpr": 0.0,
     "score": 0.0,
     "confidence": 0.0,
-    "latency": 0.0022323131561279297,
+    "latency": 0.0,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 0
@@ -6896,7 +6896,7 @@
     "fpr": 0.0,
     "score": 0.0,
     "confidence": 0.0,
-    "latency": 0.0022323131561279297,
+    "latency": 0.0,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 0
@@ -6947,7 +6947,7 @@
     "fpr": 0.0,
     "score": 82.67,
     "confidence": 74.67,
-    "latency": 0.0,
+    "latency": 0.00337982177734375,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 0
@@ -6964,7 +6964,7 @@
     "fpr": 0.0,
     "score": 100.0,
     "confidence": 100.0,
-    "latency": 0.0,
+    "latency": 0.00337982177734375,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 0
@@ -7049,7 +7049,7 @@
     "fpr": 0.0,
     "score": 83.83,
     "confidence": 73.83,
-    "latency": 0.0020062923431396484,
+    "latency": 0.0,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 0
@@ -7066,7 +7066,7 @@
     "fpr": 0.0,
     "score": 58.0,
     "confidence": 93.0,
-    "latency": 0.0020062923431396484,
+    "latency": 0.0,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 0
@@ -7083,7 +7083,7 @@
     "fpr": 0.0,
     "score": 100.0,
     "confidence": 85.0,
-    "latency": 0.0031244754791259766,
+    "latency": 0.0,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 0
@@ -7100,7 +7100,7 @@
     "fpr": 0.0,
     "score": 100.0,
     "confidence": 100.0,
-    "latency": 0.0020198822021484375,
+    "latency": 0.0,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 0
@@ -7219,7 +7219,7 @@
     "fpr": 0.0,
     "score": 100.0,
     "confidence": 85.0,
-    "latency": 0.0020318031311035156,
+    "latency": 0.0,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 0
@@ -7236,7 +7236,7 @@
     "fpr": 0.0,
     "score": 100.0,
     "confidence": 100.0,
-    "latency": 0.0020318031311035156,
+    "latency": 0.0,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 0
@@ -7253,7 +7253,7 @@
     "fpr": 0.0,
     "score": 100.0,
     "confidence": 85.0,
-    "latency": 0.002011537551879883,
+    "latency": 0.0,
     "inferred_gaps": 0,
     "late_events": 65,
     "duplicates_removed": 0
@@ -7270,7 +7270,7 @@
     "fpr": 0.0,
     "score": 100.0,
     "confidence": 100.0,
-    "latency": 0.002011537551879883,
+    "latency": 0.0,
     "inferred_gaps": 0,
     "late_events": 65,
     "duplicates_removed": 0
@@ -7355,7 +7355,7 @@
     "fpr": 0.0,
     "score": 100.0,
     "confidence": 85.0,
-    "latency": 0.0025887489318847656,
+    "latency": 0.0,
     "inferred_gaps": 0,
     "late_events": 31,
     "duplicates_removed": 24
@@ -7372,7 +7372,7 @@
     "fpr": 0.0,
     "score": 100.0,
     "confidence": 85.0,
-    "latency": 0.0025887489318847656,
+    "latency": 0.0,
     "inferred_gaps": 0,
     "late_events": 31,
     "duplicates_removed": 24
@@ -7389,7 +7389,7 @@
     "fpr": 0.0,
     "score": 100.0,
     "confidence": 85.0,
-    "latency": 0.002013683319091797,
+    "latency": 0.0,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 0
@@ -7406,7 +7406,7 @@
     "fpr": 0.0,
     "score": 100.0,
     "confidence": 100.0,
-    "latency": 0.002013683319091797,
+    "latency": 0.0,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 0
@@ -7457,7 +7457,7 @@
     "fpr": 0.0,
     "score": 0.0,
     "confidence": 0.0,
-    "latency": 0.004534006118774414,
+    "latency": 0.002016305923461914,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 0
@@ -7474,7 +7474,7 @@
     "fpr": 0.0,
     "score": 0.0,
     "confidence": 0.0,
-    "latency": 0.0025124549865722656,
+    "latency": 0.002016305923461914,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 0
@@ -7508,7 +7508,7 @@
     "fpr": 0.0,
     "score": 96.0,
     "confidence": 88.0,
-    "latency": 0.002016782760620117,
+    "latency": 0.0,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 0
@@ -7593,7 +7593,7 @@
     "fpr": 0.0,
     "score": 83.83,
     "confidence": 73.83,
-    "latency": 0.0,
+    "latency": 0.0004992485046386719,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 0
@@ -7627,7 +7627,7 @@
     "fpr": 0.0,
     "score": 100.0,
     "confidence": 85.0,
-    "latency": 0.0,
+    "latency": 0.002019643783569336,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 0
@@ -7644,7 +7644,7 @@
     "fpr": 0.0,
     "score": 100.0,
     "confidence": 100.0,
-    "latency": 0.006021022796630859,
+    "latency": 0.0,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 0
@@ -7661,7 +7661,7 @@
     "fpr": 0.0,
     "score": 100.0,
     "confidence": 85.0,
-    "latency": 0.0021257400512695312,
+    "latency": 0.0,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 0
@@ -7678,7 +7678,7 @@
     "fpr": 0.0,
     "score": 100.0,
     "confidence": 100.0,
-    "latency": 0.0010344982147216797,
+    "latency": 0.0,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 0
@@ -7831,7 +7831,7 @@
     "fpr": 0.0,
     "score": 100.0,
     "confidence": 85.0,
-    "latency": 0.0013360977172851562,
+    "latency": 0.0,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 76
@@ -7848,7 +7848,7 @@
     "fpr": 0.0,
     "score": 100.0,
     "confidence": 100.0,
-    "latency": 0.0013360977172851562,
+    "latency": 0.0,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 76
@@ -7933,7 +7933,7 @@
     "fpr": 0.0,
     "score": 94.67,
     "confidence": 82.67,
-    "latency": 0.009745597839355469,
+    "latency": 0.0,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 0
@@ -7967,7 +7967,7 @@
     "fpr": 0.0,
     "score": 12.42,
     "confidence": 51.42,
-    "latency": 0.003718852996826172,
+    "latency": 0.0010800361633300781,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 0
@@ -7984,7 +7984,7 @@
     "fpr": 0.0,
     "score": 27.42,
     "confidence": 66.42,
-    "latency": 0.0017504692077636719,
+    "latency": 0.0,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 0
@@ -8188,7 +8188,7 @@
     "fpr": 0.0,
     "score": 100.0,
     "confidence": 100.0,
-    "latency": 0.001276254653930664,
+    "latency": 0.0,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 0
@@ -8205,7 +8205,7 @@
     "fpr": 0.0,
     "score": 100.0,
     "confidence": 85.0,
-    "latency": 0.0,
+    "latency": 0.004178762435913086,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 0
@@ -8222,7 +8222,7 @@
     "fpr": 0.0,
     "score": 100.0,
     "confidence": 100.0,
-    "latency": 0.0,
+    "latency": 0.0031676292419433594,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 0
@@ -8273,7 +8273,7 @@
     "fpr": 0.0,
     "score": 100.0,
     "confidence": 85.0,
-    "latency": 0.0075452327728271484,
+    "latency": 0.001577138900756836,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 0
@@ -8290,7 +8290,7 @@
     "fpr": 0.0,
     "score": 100.0,
     "confidence": 100.0,
-    "latency": 0.0075452327728271484,
+    "latency": 0.001577138900756836,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 0
@@ -8307,7 +8307,7 @@
     "fpr": 0.0,
     "score": 100.0,
     "confidence": 85.0,
-    "latency": 0.001074075698852539,
+    "latency": 0.0015354156494140625,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 0
@@ -8324,7 +8324,7 @@
     "fpr": 0.0,
     "score": 100.0,
     "confidence": 85.0,
-    "latency": 0.0030934810638427734,
+    "latency": 0.0015354156494140625,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 0
@@ -8341,7 +8341,7 @@
     "fpr": 0.0,
     "score": 100.0,
     "confidence": 85.0,
-    "latency": 0.0,
+    "latency": 0.0015408992767333984,
     "inferred_gaps": 0,
     "late_events": 62,
     "duplicates_removed": 0
@@ -8358,7 +8358,7 @@
     "fpr": 0.0,
     "score": 100.0,
     "confidence": 100.0,
-    "latency": 0.0,
+    "latency": 0.0015408992767333984,
     "inferred_gaps": 0,
     "late_events": 62,
     "duplicates_removed": 0
@@ -8375,7 +8375,7 @@
     "fpr": 0.0,
     "score": 100.0,
     "confidence": 85.0,
-    "latency": 0.0010883808135986328,
+    "latency": 0.0,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 85
@@ -8392,7 +8392,7 @@
     "fpr": 0.0,
     "score": 100.0,
     "confidence": 100.0,
-    "latency": 0.0010883808135986328,
+    "latency": 0.0,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 85
@@ -8443,7 +8443,7 @@
     "fpr": 0.0,
     "score": 100.0,
     "confidence": 91.67,
-    "latency": 0.0010387897491455078,
+    "latency": 0.001018524169921875,
     "inferred_gaps": 0,
     "late_events": 35,
     "duplicates_removed": 25
@@ -8460,7 +8460,7 @@
     "fpr": 0.0,
     "score": 100.0,
     "confidence": 100.0,
-    "latency": 0.0010387897491455078,
+    "latency": 0.001018524169921875,
     "inferred_gaps": 0,
     "late_events": 35,
     "duplicates_removed": 25
@@ -8545,7 +8545,7 @@
     "fpr": 0.0,
     "score": 0.0,
     "confidence": 0.0,
-    "latency": 0.006747722625732422,
+    "latency": 0.0,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 0
@@ -8562,7 +8562,7 @@
     "fpr": 0.0,
     "score": 0.0,
     "confidence": 0.0,
-    "latency": 0.006747722625732422,
+    "latency": 0.0,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 0
@@ -8579,7 +8579,7 @@
     "fpr": 0.0,
     "score": 82.67,
     "confidence": 74.67,
-    "latency": 0.0010597705841064453,
+    "latency": 0.0,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 0
@@ -8698,7 +8698,7 @@
     "fpr": 0.0,
     "score": 58.0,
     "confidence": 93.0,
-    "latency": 0.0019488334655761719,
+    "latency": 0.0,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 0
@@ -8783,7 +8783,7 @@
     "fpr": 0.0,
     "score": 100.0,
     "confidence": 85.0,
-    "latency": 0.0025374889373779297,
+    "latency": 0.005311489105224609,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 0
@@ -8800,7 +8800,7 @@
     "fpr": 0.0,
     "score": 100.0,
     "confidence": 100.0,
-    "latency": 0.0005192756652832031,
+    "latency": 0.005311489105224609,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 0
@@ -8817,7 +8817,7 @@
     "fpr": 0.0,
     "score": 24.0,
     "confidence": 63.0,
-    "latency": 0.0019023418426513672,
+    "latency": 0.0,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 0
@@ -8834,7 +8834,7 @@
     "fpr": 0.0,
     "score": 39.0,
     "confidence": 78.0,
-    "latency": 0.0019023418426513672,
+    "latency": 0.0,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 0
@@ -8851,7 +8851,7 @@
     "fpr": 0.0,
     "score": 100.0,
     "confidence": 85.0,
-    "latency": 0.0005078315734863281,
+    "latency": 0.0,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 0
@@ -8885,7 +8885,7 @@
     "fpr": 0.0,
     "score": 100.0,
     "confidence": 85.0,
-    "latency": 0.0013163089752197266,
+    "latency": 0.0,
     "inferred_gaps": 0,
     "late_events": 69,
     "duplicates_removed": 0
@@ -8902,7 +8902,7 @@
     "fpr": 0.0,
     "score": 100.0,
     "confidence": 100.0,
-    "latency": 0.0013163089752197266,
+    "latency": 0.0,
     "inferred_gaps": 0,
     "late_events": 69,
     "duplicates_removed": 0
@@ -8953,7 +8953,7 @@
     "fpr": 0.0,
     "score": 42.58,
     "confidence": 59.58,
-    "latency": 0.0020232200622558594,
+    "latency": 0.0,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 20
@@ -8970,7 +8970,7 @@
     "fpr": 0.0,
     "score": 57.58,
     "confidence": 74.58,
-    "latency": 0.0020232200622558594,
+    "latency": 0.0,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 20
@@ -9021,7 +9021,7 @@
     "fpr": 0.0,
     "score": 85.92,
     "confidence": 73.92,
-    "latency": 0.0,
+    "latency": 0.002025127410888672,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 0
@@ -9038,7 +9038,7 @@
     "fpr": 0.0,
     "score": 100.0,
     "confidence": 88.92,
-    "latency": 0.0,
+    "latency": 0.0035178661346435547,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 0
@@ -9191,7 +9191,7 @@
     "fpr": 0.0,
     "score": 54.15,
     "confidence": 58.15,
-    "latency": 0.0033178329467773438,
+    "latency": 0.0,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 0
@@ -9225,7 +9225,7 @@
     "fpr": 0.0,
     "score": 68.0,
     "confidence": 58.0,
-    "latency": 0.0010840892791748047,
+    "latency": 0.0027675628662109375,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 0
@@ -9242,7 +9242,7 @@
     "fpr": 0.0,
     "score": 58.0,
     "confidence": 93.0,
-    "latency": 0.000522613525390625,
+    "latency": 0.0,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 0
@@ -9327,7 +9327,7 @@
     "fpr": 0.0,
     "score": 100.0,
     "confidence": 85.0,
-    "latency": 0.006563663482666016,
+    "latency": 0.0,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 0
@@ -9344,7 +9344,7 @@
     "fpr": 0.0,
     "score": 100.0,
     "confidence": 100.0,
-    "latency": 0.006563663482666016,
+    "latency": 0.0,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 0
@@ -9361,7 +9361,7 @@
     "fpr": 0.0,
     "score": 70.85,
     "confidence": 74.85,
-    "latency": 0.0,
+    "latency": 0.003400564193725586,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 0
@@ -9378,7 +9378,7 @@
     "fpr": 0.0,
     "score": 85.85,
     "confidence": 89.85,
-    "latency": 0.0,
+    "latency": 0.003400564193725586,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 0
@@ -9429,7 +9429,7 @@
     "fpr": 0.0,
     "score": 100.0,
     "confidence": 85.0,
-    "latency": 0.0,
+    "latency": 0.0020062923431396484,
     "inferred_gaps": 0,
     "late_events": 62,
     "duplicates_removed": 0
@@ -9446,7 +9446,7 @@
     "fpr": 0.0,
     "score": 100.0,
     "confidence": 100.0,
-    "latency": 0.0,
+    "latency": 0.0040149688720703125,
     "inferred_gaps": 0,
     "late_events": 62,
     "duplicates_removed": 0
@@ -9463,7 +9463,7 @@
     "fpr": 0.0,
     "score": 100.0,
     "confidence": 85.0,
-    "latency": 0.010715007781982422,
+    "latency": 0.0,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 72
@@ -9480,7 +9480,7 @@
     "fpr": 0.0,
     "score": 100.0,
     "confidence": 100.0,
-    "latency": 0.010715007781982422,
+    "latency": 0.0,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 72
@@ -9497,7 +9497,7 @@
     "fpr": 0.0,
     "score": 73.97,
     "confidence": 77.97,
-    "latency": 0.0020110607147216797,
+    "latency": 0.0,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 21
@@ -9514,7 +9514,7 @@
     "fpr": 0.0,
     "score": 88.97,
     "confidence": 92.97,
-    "latency": 0.0020110607147216797,
+    "latency": 0.0,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 21
@@ -9531,7 +9531,7 @@
     "fpr": 0.0,
     "score": 100.0,
     "confidence": 85.0,
-    "latency": 0.0,
+    "latency": 0.002004861831665039,
     "inferred_gaps": 0,
     "late_events": 21,
     "duplicates_removed": 27
@@ -9548,7 +9548,7 @@
     "fpr": 0.0,
     "score": 100.0,
     "confidence": 100.0,
-    "latency": 0.0,
+    "latency": 0.002004861831665039,
     "inferred_gaps": 0,
     "late_events": 21,
     "duplicates_removed": 27
@@ -9599,7 +9599,7 @@
     "fpr": 0.0,
     "score": 0.0,
     "confidence": 0.0,
-    "latency": 0.010583162307739258,
+    "latency": 0.0010097026824951172,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 0
@@ -9616,7 +9616,7 @@
     "fpr": 0.0,
     "score": 0.0,
     "confidence": 0.0,
-    "latency": 0.010583162307739258,
+    "latency": 0.0010097026824951172,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 0
@@ -9633,7 +9633,7 @@
     "fpr": 0.0,
     "score": 23.97,
     "confidence": 62.97,
-    "latency": 0.002022981643676758,
+    "latency": 0.0,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 0
@@ -9769,7 +9769,7 @@
     "fpr": 0.0,
     "score": 83.83,
     "confidence": 73.83,
-    "latency": 0.0045413970947265625,
+    "latency": 0.0,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 0
@@ -9837,7 +9837,7 @@
     "fpr": 0.0,
     "score": 16.0,
     "confidence": 43.0,
-    "latency": 0.0010826587677001953,
+    "latency": 0.0,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 0
@@ -9854,7 +9854,7 @@
     "fpr": 0.0,
     "score": 31.0,
     "confidence": 58.0,
-    "latency": 0.0010826587677001953,
+    "latency": 0.0,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 0
@@ -9939,7 +9939,7 @@
     "fpr": 0.0,
     "score": 100.0,
     "confidence": 85.0,
-    "latency": 0.00509953498840332,
+    "latency": 0.0,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 0
@@ -9956,7 +9956,7 @@
     "fpr": 0.0,
     "score": 100.0,
     "confidence": 100.0,
-    "latency": 0.0037043094635009766,
+    "latency": 0.0,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 0
@@ -10007,7 +10007,7 @@
     "fpr": 0.0,
     "score": 100.0,
     "confidence": 85.0,
-    "latency": 0.0010211467742919922,
+    "latency": 0.0,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 75
@@ -10024,7 +10024,7 @@
     "fpr": 0.0,
     "score": 100.0,
     "confidence": 100.0,
-    "latency": 0.0010211467742919922,
+    "latency": 0.0,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 75
@@ -10109,7 +10109,7 @@
     "fpr": 0.0,
     "score": 100.0,
     "confidence": 85.0,
-    "latency": 0.0007200241088867188,
+    "latency": 0.0,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 0
@@ -10126,7 +10126,7 @@
     "fpr": 0.0,
     "score": 100.0,
     "confidence": 100.0,
-    "latency": 0.0007200241088867188,
+    "latency": 0.0,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 0
@@ -10143,7 +10143,7 @@
     "fpr": 0.0,
     "score": 18.48,
     "confidence": 57.48,
-    "latency": 0.0036649703979492188,
+    "latency": 0.0,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 0
@@ -10160,7 +10160,7 @@
     "fpr": 0.0,
     "score": 33.48,
     "confidence": 72.48,
-    "latency": 0.006006479263305664,
+    "latency": 0.0,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 0
@@ -10177,7 +10177,7 @@
     "fpr": 0.0,
     "score": 0.0,
     "confidence": 0.0,
-    "latency": 0.0017583370208740234,
+    "latency": 0.0,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 0
@@ -10194,7 +10194,7 @@
     "fpr": 0.0,
     "score": 0.0,
     "confidence": 0.0,
-    "latency": 0.0017583370208740234,
+    "latency": 0.0,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 0
@@ -10517,7 +10517,7 @@
     "fpr": 0.0,
     "score": 100.0,
     "confidence": 85.0,
-    "latency": 0.0021092891693115234,
+    "latency": 0.011054515838623047,
     "inferred_gaps": 0,
     "late_events": 64,
     "duplicates_removed": 0
@@ -10534,7 +10534,7 @@
     "fpr": 0.0,
     "score": 100.0,
     "confidence": 100.0,
-    "latency": 0.0021092891693115234,
+    "latency": 0.009029865264892578,
     "inferred_gaps": 0,
     "late_events": 64,
     "duplicates_removed": 0
@@ -10551,7 +10551,7 @@
     "fpr": 0.0,
     "score": 100.0,
     "confidence": 85.0,
-    "latency": 0.0010373592376708984,
+    "latency": 0.003226757049560547,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 75
@@ -10568,7 +10568,7 @@
     "fpr": 0.0,
     "score": 100.0,
     "confidence": 100.0,
-    "latency": 0.0010373592376708984,
+    "latency": 0.002215862274169922,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 75
@@ -10619,7 +10619,7 @@
     "fpr": 0.0,
     "score": 74.0,
     "confidence": 78.0,
-    "latency": 0.007197141647338867,
+    "latency": 0.0024919509887695312,
     "inferred_gaps": 0,
     "late_events": 27,
     "duplicates_removed": 23
@@ -10636,7 +10636,7 @@
     "fpr": 0.0,
     "score": 89.0,
     "confidence": 93.0,
-    "latency": 0.007197141647338867,
+    "latency": 0.0024919509887695312,
     "inferred_gaps": 0,
     "late_events": 27,
     "duplicates_removed": 23
@@ -10687,7 +10687,7 @@
     "fpr": 0.0,
     "score": 0.0,
     "confidence": 0.0,
-    "latency": 0.0,
+    "latency": 0.00156402587890625,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 0
@@ -10704,7 +10704,7 @@
     "fpr": 0.0,
     "score": 0.0,
     "confidence": 0.0,
-    "latency": 0.0,
+    "latency": 0.00156402587890625,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 0
@@ -10721,7 +10721,7 @@
     "fpr": 0.0,
     "score": 0.0,
     "confidence": 0.0,
-    "latency": 0.0,
+    "latency": 0.0015413761138916016,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 0
@@ -10738,7 +10738,7 @@
     "fpr": 0.0,
     "score": 0.0,
     "confidence": 0.0,
-    "latency": 0.0,
+    "latency": 0.0015413761138916016,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 0
@@ -10823,7 +10823,7 @@
     "fpr": 0.0,
     "score": 22.0,
     "confidence": 63.0,
-    "latency": 0.005326271057128906,
+    "latency": 0.0,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 0
@@ -10840,7 +10840,7 @@
     "fpr": 0.0,
     "score": 52.0,
     "confidence": 93.0,
-    "latency": 0.005326271057128906,
+    "latency": 0.0,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 0
@@ -10874,7 +10874,7 @@
     "fpr": 0.0,
     "score": 58.0,
     "confidence": 93.0,
-    "latency": 0.0014753341674804688,
+    "latency": 0.0,
     "inferred_gaps": 0,
     "late_events": 0,
     "duplicates_removed": 0
