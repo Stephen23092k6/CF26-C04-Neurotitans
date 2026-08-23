@@ -5,6 +5,8 @@ from typing import Any, Iterable, Optional
 import hashlib
 import math
 
+from app.identity import SessionContinuity
+
 
 @dataclass(frozen=True)
 class Event:
@@ -153,6 +155,8 @@ class PathEvidence:
     spatial_transition: bool
     is_inferred: bool = False
     inference_reason: str = ""
+    continuity_bonus: float = 0.0
+    continuity_penalty: float = 0.0
 
 
 @dataclass
@@ -179,20 +183,20 @@ def _network_of(graph: DynamicSecurityGraph, node: str) -> Optional[str]:
 
 
 class AttackReconstructor:
-    def __init__(self, time_window: float = 120.0, max_depth: int = 6, 
-                 max_inferred_gaps: int = 2, min_plausibility: float = 65.0,
-                 weights: dict[str, float] = None) -> None:
+    def __init__(self, time_window=120.0, max_inferred_gaps=2, max_depth=8, min_plausibility=60.0, weights=None, use_identity_layer=True):
         self.time_window = time_window
-        self.max_depth = max_depth
         self.max_inferred_gaps = max_inferred_gaps
+        self.max_depth = max_depth
+        self.use_identity_layer = use_identity_layer
+        
         # Minimum plausibility score required to bridge an INFERRED_GAP (suggested: 60-65)
         self.min_plausibility = min_plausibility
         self.weights = weights or {
-            "temporal": 30.0,
-            "network": 25.0,
-            "spatial": 15.0,
+            "temporal": 25.0,
+            "network": 15.0,
+            "spatial": 10.0,
             "topology": 20.0,
-            "high_value": 10.0,
+            "identity": 30.0,
             "contradictory": -40.0
         }
 
@@ -212,10 +216,17 @@ class AttackReconstructor:
         if seed not in graph.nodes:
             return []
         paths: list[AttackPath] = []
-        q: deque[tuple[str, list[str], list[PathEvidence], float, int]] = deque([(seed, [seed], [], 0.0, 0)])
+        
+        # Initialize continuity and populate it with seed's earliest event to prevent clobbering
+        init_cont = SessionContinuity()
+        seed_evs = sorted(graph.events_by_node.get(seed, []), key=lambda e: e.event_time)
+        if seed_evs:
+            init_cont.update_from_events([seed_evs[0]])
+        
+        q: deque[tuple[str, list[str], list[PathEvidence], float, int, SessionContinuity]] = deque([(seed, [seed], [], 0.0, 0, init_cont)])
 
         while q:
-            node, nodes, evidences, raw, gap_count = q.popleft()
+            node, nodes, evidences, raw, gap_count, cont = q.popleft()
             
             if len(nodes) > self.max_depth:
                 continue
@@ -244,18 +255,30 @@ class AttackReconstructor:
                     continue
                 score, net, spatial = self._edge_score(graph, node, nxt, meta)
                 
-                curr_times = [ev.event_time for ev in graph.events_by_node.get(nxt, []) if ev.event_id in meta.get("supporting_events", [])]
+                curr_events = [ev for ev in graph.events_by_node.get(nxt, []) if ev.event_id in meta.get("supporting_events", [])]
+                curr_times = [ev.event_time for ev in curr_events]
                 curr_time = max(curr_times) if curr_times else prev_time
                 gap = max(0.0, curr_time - prev_time)
                 
                 if evidences and gap > self.time_window:
                     continue
                     
+                # Evaluate identity continuity
+                bonus, penalty, cont_reasons = cont.evaluate_transition(curr_events) if self.use_identity_layer else (0.0, 0.0, [])
+                new_cont = cont.clone()
+                new_cont.update_from_events(curr_events)
+                
                 evidence = PathEvidence(
                     node, nxt, meta["relation"], list(meta.get("supporting_events", [])), 
-                    gap, net, spatial, is_inferred=False
+                    gap, net, spatial, is_inferred=False, inference_reason=" | ".join(cont_reasons) if cont_reasons else "",
+                    continuity_bonus=bonus, continuity_penalty=penalty
                 )
-                q.append((nxt, nodes + [nxt], evidences + [evidence], raw + score, gap_count))
+                
+                # Apply continuity bonuses/penalties to raw score (we adjust raw directly, or can adjust it in finalize)
+                # We'll just add it to raw score here to reflect the path's quality
+                hop_score = score + bonus - penalty
+                
+                q.append((nxt, nodes + [nxt], evidences + [evidence], raw + hop_score, gap_count, new_cont))
                 enqueued_explicit.add(nxt)
 
             if gap_count >= self.max_inferred_gaps:
@@ -300,17 +323,26 @@ class AttackReconstructor:
                     plausibility += self.weights["topology"]
                     reasons.append(f"topology(+{self.weights['topology']})")
                     
-                nxt_type = graph.nodes[nxt].entity_type
-                if nxt_type in ("SERVER", "ASSET"):
-                    plausibility += self.weights["high_value"]
-                    reasons.append(f"high_value(+{self.weights['high_value']})")
-                    
                 contradictory_types = {"DEVICE_OFFLINE", "ACCOUNT_LOCKED", "POLICY_DENY", "NETWORK_ISOLATED", "AUTHENTICATION_FAILED"}
                 contradictory_evs = [ev for ev in graph.events_by_node.get(nxt, []) if ev.event_time >= prev_time and ev.event_type in contradictory_types]
                 
                 if contradictory_evs:
                     plausibility += self.weights["contradictory"]
                     reasons.append(f"contradictory({self.weights['contradictory']})")
+
+                # Evaluate identity continuity for the inferred hop
+                bonus, penalty, cont_reasons = cont.evaluate_transition(nxt_events) if self.use_identity_layer else (0.0, 0.0, [])
+                new_cont = cont.clone()
+                new_cont.update_from_events(nxt_events)
+                
+                if bonus > 0:
+                    plausibility += self.weights["identity"]
+                    reasons.append(f"identity(+{self.weights['identity']})")
+                if penalty > 0:
+                    plausibility += self.weights["contradictory"]
+                    reasons.append(f"identity_anomaly({self.weights['contradictory']})")
+                    
+                reasons.extend(cont_reasons)
 
                 if plausibility < self.min_plausibility:
                     continue
@@ -321,9 +353,10 @@ class AttackReconstructor:
                 
                 evidence = PathEvidence(
                     node, nxt, "INFERRED_GAP", [], gap, network_transition, spatial_transition, 
-                    is_inferred=True, inference_reason=reason_str
+                    is_inferred=True, inference_reason=reason_str,
+                    continuity_bonus=bonus, continuity_penalty=penalty
                 )
-                q.append((nxt, nodes + [nxt], evidences + [evidence], raw - 5.0, gap_count + 1))
+                q.append((nxt, nodes + [nxt], evidences + [evidence], raw - 5.0 + bonus - penalty, gap_count + 1, new_cont))
 
         uniq: dict[tuple[str, ...], AttackPath] = {}
         for p in paths:
@@ -351,6 +384,12 @@ class AttackReconstructor:
         
         score -= gap_count * 5
         confidence -= gap_count * 30
+        
+        cb = sum(e.continuity_bonus for e in evidences) if self.use_identity_layer else 0.0
+        cp = sum(e.continuity_penalty for e in evidences) if self.use_identity_layer else 0.0
+        
+        # Apply continuity adjustments
+        confidence = confidence + cb - cp
         
         explanation = [
             f"Path consists of {obs_count} observed transition(s) and {gap_count} inferred gap(s).",

@@ -5,6 +5,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from app.simulator import BuildingSimulator, process_events
 from app.engine import DynamicSecurityGraph, AttackReconstructor
 from app.baselines import IsolatedAlertBaseline, SlidingWindowBaseline, StaticGraphBaseline
+from app.adversary import IdentityAdversarySimulator
 
 SCENARIOS = {
     "S0-Clean":          {"missing": 0.0, "delayed": 0.0, "duplicate": 0.0, "is_benign": False},
@@ -19,13 +20,15 @@ SCENARIOS = {
     "S9-Multi-Path":     {"missing": 0.1, "delayed": 2.0, "duplicate": 0.0, "is_benign": False, "multi_path": True},
     "BENIGN_ANOMALY":    {"missing": 0.0, "delayed": 0.0, "duplicate": 0.0, "is_benign": True},
     "PARTIAL_FLOOR_LOSS":{"missing": 0.0, "delayed": 0.0, "duplicate": 0.0, "is_benign": False, "floor_loss": 3},
+    "S10-VPN-Rotation":  {"missing": 0.0, "delayed": 0.0, "duplicate": 0.0, "is_benign": False, "identity_sim": "vpn"},
+    "S11-IP-Churn":      {"missing": 0.0, "delayed": 0.0, "duplicate": 0.0, "is_benign": False, "identity_sim": "churn"},
+    "S12-Stolen-Creds":  {"missing": 0.0, "delayed": 0.0, "duplicate": 0.0, "is_benign": False, "identity_sim": "stolen"},
+    "S13-Identity-Spoof":{"missing": 0.0, "delayed": 0.0, "duplicate": 0.0, "is_benign": False, "identity_sim": "spoof"},
 }
 
 MODELS = {
-    "IsolatedAlert": IsolatedAlertBaseline(),
-    "SlidingWindow": SlidingWindowBaseline(),
-    "StaticGraph": StaticGraphBaseline(),
-    "NeurobrainX": AttackReconstructor()
+    "NeurobrainX (No Identity)": AttackReconstructor(use_identity_layer=False),
+    "NeurobrainX (With Identity)": AttackReconstructor(use_identity_layer=True)
 }
 
 def jaccard(set1, set2):
@@ -38,12 +41,26 @@ def run_monte_carlo(runs=20, target_guided=True):
     
     for run_idx in range(runs):
         seed = 1000 + run_idx
-        sim = BuildingSimulator(config=None)
+        sim = IdentityAdversarySimulator(config=None)
         sim.rng.seed(seed)
         
         for sc_name, sc_params in SCENARIOS.items():
-            data = sim.generate_scenario(sc_name, is_benign=sc_params.get("is_benign", False), 
-                                         multi_path=sc_params.get("multi_path", False))
+            idsim = sc_params.get("identity_sim")
+            if idsim == "vpn":
+                data = sim.simulate_vpn_rotation()
+                data.name = sc_name
+            elif idsim == "churn":
+                data = sim.simulate_ip_churn()
+                data.name = sc_name
+            elif idsim == "stolen":
+                data = sim.simulate_stolen_credential()
+                data.name = sc_name
+            elif idsim == "spoof":
+                data = sim.simulate_identity_spoofing()
+                data.name = sc_name
+            else:
+                data = sim.generate_scenario(sc_name, is_benign=sc_params.get("is_benign", False), 
+                                             multi_path=sc_params.get("multi_path", False))
             
             p_events = sim.perturb_stream(data, 
                                           missing=sc_params.get("missing", 0.0),
@@ -193,10 +210,9 @@ if __name__ == "__main__":
     with open(out_dir / "scalability.json", "w") as f:
         json.dump(scale_results, f, indent=2)
         
-    print("Generating VALIDATION_REPORT.md...")
-    md = "# Phase 3.1 Validation Report\n\n"
-    md += "## Methodology\n12 Scenarios run across 4 models for 20 Monte Carlo iterations (seeds 1000-1019) to measure resilience and fidelity.\n"
-    md += "Jitter experiments use a strict fixed 8-second reorder window to test true late-event tolerance.\n\n"
+    print("Generating PHASE_4B_ADVERSARIAL_REPORT.md...")
+    md = "# Phase 4B Adversarial Validation Report\n\n"
+    md += "## Methodology\nScenarios S10-S13 run specifically against identity-centric attacks, evaluating Neurobrain X with and without the Identity Continuity Layer.\n\n"
     
     md += "## Model Comparison Table\n"
     md += "| Scenario | Model | Target Reached | Struct Valid | Completeness | Jaccard | FPR | Score | Confidence | Late Events |\n"
@@ -204,20 +220,21 @@ if __name__ == "__main__":
     for r in agg_results:
         md += f"| {r['Scenario']} | {r['Model']} | {r['Target Reached']:.2f} | {r['Struct Valid']:.2f} | {r['Path Completeness']:.2f} | {r['Jaccard']:.2f} | {r['FPR']:.2f} | {r['Threat Score']:.1f} | {r['Confidence']:.1f} | {r['Late Events']:.1f} |\n"
         
-    md += "\n## Scalability Measurements\n"
-    md += "| Events | Ingest Latency (s) | Recon Latency (s) | Total Runtime (s) | Throughput (EPS) |\n"
-    md += "|---|---|---|---|---|\n"
-    for sr in scale_results:
-        md += f"| {sr['events']} | {sr['ingest_latency_s']:.4f} | {sr['recon_latency_s']:.4f} | {sr['total_runtime_s']:.4f} | {sr['throughput_eps']:.0f} |\n"
-        
-    md += "\n## Interpretation of Correlated Floor Loss\n"
-    md += "Under PARTIAL_FLOOR_LOSS, Neurobrain X correctly fails to reach the target because the physical telemetry does not exist. It preserves monitoring continuity and provides a partial reconstruction of the evidence prior to the gap, rather than fabricating a structurally invalid path like baseline algorithms.\n"
+    md += "\n## Identity Attack Resilience Score\n"
+    md += "Resilience Score is computed as the relative performance preservation (or correct rejection) in S10-S13 when the Identity Layer is active compared to inactive.\n"
     
-    md += "\n## Known Limitations\n"
-    md += "- High raw telemetry loss (>30%) causes significant performance drops in structural recovery.\n"
-    md += "- Correlated spatial loss completely severs path traversal; requires logical inference fallbacks (e.g., AD logs) to bridge physical gaps.\n"
-        
-    with open(out_dir / "VALIDATION_REPORT.md", "w") as f:
+    # Calculate simple resilience score difference for S10-S13
+    resilience_md = ""
+    for sc in ["S10-VPN-Rotation", "S11-IP-Churn", "S12-Stolen-Creds", "S13-Identity-Spoof"]:
+        no_id = next((r for r in agg_results if r["Scenario"] == sc and "No Identity" in r["Model"]), None)
+        with_id = next((r for r in agg_results if r["Scenario"] == sc and "With Identity" in r["Model"]), None)
+        if no_id and with_id:
+            # We look at confidence primarily for resilience
+            resilience_md += f"- **{sc}**: Confidence shifted from {no_id['Confidence']:.1f} -> {with_id['Confidence']:.1f}. \n"
+    
+    md += resilience_md
+    
+    with open(out_dir / "PHASE_4B_ADVERSARIAL_REPORT.md", "w") as f:
         f.write(md)
         
     print("Done. Results written to benchmarks/results/")

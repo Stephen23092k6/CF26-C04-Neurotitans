@@ -79,11 +79,11 @@ def test_high_value_asset_alone_insufficient():
 
 
 def test_strong_combined_evidence_produces_gap():
-    # temporal (30) + network (25) + high_value (10) = 65 >= 65 -> Plausible
+    # temporal (25) + network (15) + identity (30) = 70 >= 65 -> Plausible
     g = DynamicSecurityGraph()
     evs = [
-        Event("a", "AUTHENTICATION", 1, 1, "D1", "S1", device_id="D1", floor=1, network_segment="N1", severity=.5),
-        Event("b", "RESOURCE_ACCESS", 3, 3, "S2", "S2", floor=4, network_segment="N3", severity=.9),
+        Event("a", "AUTHENTICATION", 1, 1, "D1", "S1", device_id="D1", user_id="U1", floor=1, network_segment="N1", severity=.5),
+        Event("b", "RESOURCE_ACCESS", 3, 3, "S2", "S2", device_id="D1", user_id="U1", floor=4, network_segment="N3", severity=.9),
     ]
     # S1 (N3/3), S2 is SERVER (N3/4)
     for n, typ, floor, net in [("D1", "DEVICE", 1, "N1"), ("S1", "DEVICE", 3, "N3"), ("S2", "SERVER", 4, "N3")]:
