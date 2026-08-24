@@ -60,8 +60,104 @@ function renderDashboard(data) {
         mitreContainer.appendChild(d);
     });
     
+    // Phase 10 Renderers
+    renderEnterpriseAssets(data.enterprise_assets);
+    renderThreatPrediction(data.prediction);
+    renderSecurityMemory(data.memory);
+    renderPlaybook(data.playbook);
+    
     renderTimeline();
 }
+
+function renderEnterpriseAssets(assets) {
+    const container = document.getElementById('ui-enterprise-assets');
+    if (!container) return;
+    container.innerHTML = '';
+    if (!assets) {
+        container.innerHTML = '<div class="asset-box">No asset data available.</div>';
+        return;
+    }
+    
+    assets.forEach(a => {
+        const d = document.createElement('div');
+        d.className = 'asset-box';
+        let color = 'var(--text-muted)';
+        if (a.criticality === 'CRITICAL') color = 'var(--accent-red)';
+        if (a.criticality === 'HIGH') color = 'var(--accent-amber)';
+        
+        d.innerHTML = `
+            <div style="display:flex; justify-content:space-between; align-items:center;">
+                <strong>${a.asset}</strong>
+                <span style="color:${color}; font-size:12px; font-weight:600;">${a.criticality}</span>
+            </div>
+            <div style="font-size:12px; color:var(--text-muted); margin-top:4px;">
+                Owner: ${a.owner} | Type: ${a.type}
+            </div>
+        `;
+        container.appendChild(d);
+    });
+}
+
+function renderThreatPrediction(prediction) {
+    const container = document.getElementById('ui-prediction');
+    if (!container) return;
+    container.innerHTML = '';
+    if (!prediction) {
+        container.innerHTML = '<div class="prediction-box">No predictions available.</div>';
+        return;
+    }
+    
+    const d = document.createElement('div');
+    d.className = 'prediction-box';
+    
+    const actions = prediction.predicted_actions.map(a => `<li>${a}</li>`).join('');
+    const reasoning = prediction.reasoning.map(r => `<li>${r}</li>`).join('');
+    
+    d.innerHTML = `
+        <div class="prediction-title">Confidence: ${prediction.confidence}%</div>
+        <div style="font-size:13px; margin-bottom:8px;"><strong>Next Likely Actions:</strong><ul>${actions}</ul></div>
+        <div style="font-size:13px; color:var(--text-muted);"><strong>Reasoning:</strong><ul>${reasoning}</ul></div>
+    `;
+    container.appendChild(d);
+}
+
+function renderSecurityMemory(memory) {
+    const container = document.getElementById('ui-security-memory');
+    if (!container) return;
+    container.innerHTML = '';
+    if (!memory || !memory.similar_incidents || memory.similar_incidents.length === 0) {
+        container.innerHTML = '<div class="memory-box">No similar incidents found.</div>';
+        return;
+    }
+    
+    memory.similar_incidents.forEach(inc => {
+        const d = document.createElement('div');
+        d.className = 'memory-box';
+        d.innerHTML = `
+            <div class="memory-title">Match: ${(inc.incident_similarity * 100).toFixed(0)}% Similarity</div>
+            <div style="font-size:13px; margin-bottom:4px;"><strong>Pattern:</strong> ${inc.previous_pattern}</div>
+            <div style="font-size:13px; margin-bottom:4px;"><strong>Threat Family:</strong> ${inc.known_attack_family}</div>
+            <div style="font-size:13px; color:var(--text-muted);"><strong>Historical Response:</strong><br/> - ${inc.recommended_response.join('<br/> - ')}</div>
+        `;
+        container.appendChild(d);
+    });
+}
+
+function renderPlaybook(playbook) {
+    const container = document.getElementById('ui-playbook');
+    if (!container) return;
+    container.innerHTML = '';
+    if (!playbook || playbook.length === 0) {
+        container.innerHTML = '<div class="playbook-step">No automated playbook steps generated.</div>';
+        return;
+    }
+    
+    playbook.forEach(step => {
+        const d = document.createElement('div');
+        d.className = 'playbook-step';
+        d.textContent = step;
+        container.appendChild(d);
+    });
 
 function renderTimeline() {
     if (!currentData) return;

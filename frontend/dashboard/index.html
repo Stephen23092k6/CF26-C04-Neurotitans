@@ -38,7 +38,7 @@
       display: grid;
       grid-template-columns: 300px 1fr 350px;
       gap: 20px;
-      height: calc(100vh - 100px);
+      margin-bottom: 20px;
     }
     
     .panel {
@@ -151,6 +151,29 @@
       margin-bottom: 8px;
     }
     
+    /* Phase 10 Extensions */
+    .prediction-box, .memory-box, .asset-box {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid var(--border);
+      padding: 12px;
+      margin-bottom: 12px;
+      border-radius: 6px;
+    }
+    .prediction-title { color: var(--accent-blue); font-weight: 600; margin-bottom: 6px; }
+    .memory-title { color: var(--accent-amber); font-weight: 600; margin-bottom: 6px; }
+    
+    .playbook-step {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 8px;
+      font-size: 13px;
+      padding: 8px;
+      background: rgba(16, 185, 129, 0.1);
+      border: 1px solid var(--accent-green);
+      border-radius: 4px;
+      color: var(--accent-green);
+    }
+    
   </style>
 </head>
 <body>
@@ -199,6 +222,29 @@
         <button class="replay-btn" id="btn-replay-next">&rarr;</button>
       </div>
       <div class="timeline" id="ui-timeline"></div>
+    </div>
+  </div>
+  
+  <div class="grid" style="height: auto;">
+    <!-- Left: Enterprise Asset Risk Map -->
+    <div class="panel">
+      <h3>Enterprise Asset Risk Map</h3>
+      <div id="ui-enterprise-assets"></div>
+    </div>
+    
+    <!-- Center: Threat Prediction & Security Memory -->
+    <div class="panel">
+      <h3>Threat Prediction</h3>
+      <div id="ui-prediction"></div>
+      
+      <h3 style="margin-top: 20px;">Security Memory</h3>
+      <div id="ui-security-memory"></div>
+    </div>
+    
+    <!-- Right: Automated Playbook Viewer -->
+    <div class="panel">
+      <h3>Automated Playbook Viewer</h3>
+      <div id="ui-playbook"></div>
     </div>
   </div>
 
