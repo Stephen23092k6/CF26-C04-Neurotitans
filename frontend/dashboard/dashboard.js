@@ -158,6 +158,58 @@ function renderPlaybook(playbook) {
         d.textContent = step;
         container.appendChild(d);
     });
+}
+
+function renderAttackStatus(status) {
+    const el = document.getElementById('ui-live-status');
+    if (!el) return;
+    if (status) {
+        el.textContent = status;
+        el.style.display = 'block';
+    } else {
+        el.style.display = 'none';
+    }
+}
+
+function renderAttackPath(pathNodes, edges) {
+    const container = document.getElementById('ui-attack-path');
+    if (!container) return;
+    container.innerHTML = '';
+    if (!pathNodes || pathNodes.length === 0) return;
+    
+    pathNodes.forEach((node, idx) => {
+        const d = document.createElement('div');
+        d.className = 'path-node';
+        // if anomalies exist for this node, add 'anomaly' class
+        // simplistic check:
+        d.textContent = node;
+        container.appendChild(d);
+        
+        if (idx < pathNodes.length - 1) {
+            const link = document.createElement('div');
+            link.className = 'path-link';
+            // if edge is inferred, add 'inferred' class
+            if (edges && edges[idx] && edges[idx].is_inferred) {
+                link.classList.add('inferred');
+            }
+            container.appendChild(link);
+        }
+    });
+}
+
+function renderDefenseStatus(defenseSteps) {
+    const container = document.getElementById('ui-autonomous-defense');
+    if (!container) return;
+    container.innerHTML = '';
+    if (!defenseSteps) return;
+    
+    defenseSteps.forEach(step => {
+        const d = document.createElement('div');
+        d.className = 'defense-item';
+        d.innerHTML = `<span class="defense-tick">✓</span> ${step}`;
+        container.appendChild(d);
+    });
+}
 
 function renderTimeline() {
     if (!currentData) return;
