@@ -143,6 +143,6 @@ def process_events(events, reorder_window=8.0):
 # Legacy wrapper for UI compatibility
 def get_legacy_sim():
     s = BuildingSimulator()
-    s.attack_scenario = lambda: s.generate_scenario("legacy").events[:5]
+    s.attack_scenario = lambda: s.generate_scenario("legacy").events
     s.mixed_scenario = lambda m, d, dup: s.perturb_stream(s.generate_scenario("legacy"), m, d, dup)
     return s

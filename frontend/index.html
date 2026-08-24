@@ -3,112 +3,309 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Neurobrain X - C-04 SOC</title>
+  <title>Neurobrain X - Enterprise Cybersecurity Platform</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/ui/style.css">
   <script type="module" src="https://unpkg.com/@splinetool/viewer@1.0.94/build/spline-viewer.js"></script>
 </head>
 <body>
+
+  <!-- FIXED HEADER -->
   <header>
     <div class="brand">
       NEUROBRAIN X 
-      <span class="badge">PROTOTYPE C-04</span>
+      <span class="badge">ENTERPRISE SOC PLATFORM</span>
     </div>
     <div class="header-stats">
       <span id="stat-nodes">NODES: --</span>
       <span id="stat-edges">EDGES: --</span>
       <span id="stat-events">EVENTS: --</span>
     </div>
-    <div class="status online">● ENGINE ONLINE</div>
+    <div class="status online">● THREAT ENGINE ONLINE</div>
   </header>
 
-  <div class="layout">
-    <!-- LEFT PANEL: Navigation & Simulation -->
-    <aside class="panel left-panel">
-      <div class="panel-header">SIMULATION CONTROL</div>
-      <div class="panel-content">
-        <button id="btn-normal" class="btn">Baseline State</button>
-        <button id="btn-attack" class="btn danger-btn">Reconstruct Incident</button>
-        
-        <div class="section-title">RESILIENCE LAB (C-04)</div>
-        <div class="control-group">
-          <label>Missing Telemetry <span id="val-loss">20%</span></label>
-          <input type="range" id="inp-loss" min="0" max="0.5" step="0.05" value="0.2">
-        </div>
-        <div class="control-group">
-          <label>Delay Window <span id="val-delay">4s</span></label>
-          <input type="range" id="inp-delay" min="0" max="12" step="1" value="4">
-        </div>
-        <div class="control-group">
-          <label>Duplicate Rate <span id="val-dup">10%</span></label>
-          <input type="range" id="inp-dup" min="0" max="0.5" step="0.05" value="0.1">
-        </div>
-        <button id="btn-simulate" class="btn">Apply Degradation</button>
+  <div class="scroll-container">
 
-        <div class="section-title">BENCHMARK</div>
-        <button id="btn-benchmark" class="btn outline">Run Full Benchmark</button>
-      </div>
-    </aside>
-
-    <!-- CENTER WORKSPACE: 2D Graph -->
-    <main class="workspace">
-      <div class="workspace-header" style="display:flex; justify-content:space-between;">
-        <span>SPATIAL SECURITY GRAPH</span>
-        <div>
-          <button class="btn outline" id="btn-toggle-3d" style="padding:2px 8px; font-size:10px; margin:0;">SWITCH TO 3D SPLINE</button>
+    <!-- SECTION 1: HERO EXPERIENCE -->
+    <section class="hero">
+      <div class="hero-content">
+        <div class="hero-title">
+          <h2 class="hero-subtitle-top">NEUROBRAIN X</h2>
+          <h1 class="hero-main-title">Enterprise<br>Autonomous<br>SOC Platform</h1>
+        </div>
+        <p class="hero-description">
+          Autonomous cyber intelligence that reconstructs attacks, predicts adversary movement, and generates defense actions.
+        </p>
+        <div class="hero-buttons">
+          <button id="btn-hero-simulate" class="btn primary-btn" onclick="document.getElementById('soc-section').scrollIntoView({behavior: 'smooth'})">[ RUN SIMULATION ]</button>
+          <button class="btn outline-btn" onclick="document.getElementById('soc-section').scrollIntoView({behavior: 'smooth'})">[ ENTER COMMAND CENTER ]</button>
         </div>
       </div>
-      <div id="graph-container">
-        <!-- Canvas for rendering the fallback 2D graph -->
-        <canvas id="graph-canvas"></canvas>
-        <div id="spline-placeholder" class="hidden" style="width:100%; height:100%;">
-          <spline-viewer id="spline-viewer" url="https://prod.spline.design/placeholder/scene.splinecode"></spline-viewer>
-        </div>
-      </div>
-    </main>
+      <div class="hero-visual">
+        <!-- Spline core goes here -->
+        <div class="core-container">
+          <!-- Background grid / network lines effect -->
+          <div class="network-grid"></div>
+          
+          <img src="/ui/assets/neurobrain_core.png" alt="Intelligence Core" class="neurobrain-core">
+          
+          <!-- Telemetry Particles -->
+          <div class="telemetry-particles">
+              <div class="particle p1"></div>
+              <div class="particle p2"></div>
+              <div class="particle p3"></div>
+              <div class="particle p4"></div>
+          </div>
 
-    <!-- RIGHT PANEL: Inspector -->
-    <aside class="panel right-panel">
-      <div class="tabs">
-        <div class="tab active" id="tab-incident">INCIDENT</div>
-        <div class="tab" id="tab-entity">ENTITY</div>
+          <!-- Threat Indicators -->
+          <div class="threat-ring"></div>
+          <div class="threat-scanner"></div>
+
+          <div class="hud-elements">
+            <div class="hud-item hud-top-left">
+               <div class="hud-value">100%</div>
+               <div class="hud-label">THREAT ENGINE ONLINE</div>
+            </div>
+            <div class="hud-item hud-top-right">
+               <div class="hud-value">ACTIVE</div>
+               <div class="hud-label">SECURITY MEMORY</div>
+            </div>
+            <div class="hud-item hud-bottom-left">
+               <div class="hud-value">READY</div>
+               <div class="hud-label">PREDICTION ENGINE</div>
+            </div>
+            <div class="hud-item hud-bottom-right">
+               <div class="hud-value">ENABLED</div>
+               <div class="hud-label">AUTONOMOUS RESPONSE</div>
+            </div>
+          </div>
+        </div>
       </div>
       
-      <div class="panel-content" id="inspector-incident">
-        <div class="empty-state">NO ACTIVE INCIDENT</div>
+      <!-- Metrics absolutely positioned at bottom of hero -->
+      <div class="hero-bottom-metrics">
+        <div class="metric-item"><strong>57+</strong> TESTS PASSED</div>
+        <div class="metric-item"><strong>10</strong> INTELLIGENCE LAYERS</div>
+        <div class="metric-item"><strong>50+</strong> ATTACK SCENARIOS</div>
+        <div class="metric-item"><strong>100%</strong> DETERMINISTIC ENGINE</div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: AUTONOMOUS SOC COMMAND CENTER -->
+    <section class="section-soc" id="soc-section">
+      <div class="mission-header">
+        <h2 class="mission-title">AUTONOMOUS SOC COMMAND CENTER</h2>
+        <p class="mission-subtitle">Real-time attack reconstruction, adversary prediction, and autonomous defense orchestration.</p>
+        <div class="mission-divider"></div>
       </div>
       
-      <div class="panel-content hidden" id="inspector-entity">
-        <div class="empty-state">NO ENTITY SELECTED</div>
+      <div class="soc-grid">
+        <!-- LEFT: THREAT INTELLIGENCE -->
+        <aside class="mission-panel left-panel">
+          <div class="panel-glitch-border"></div>
+          <div class="mission-panel-header">
+            <span class="bracket">[</span> THREAT INTELLIGENCE <span class="bracket">]</span>
+          </div>
+          <div class="mission-panel-content">
+            
+            <div class="threat-hud">
+              <div class="hud-box primary-hud">
+                <div class="hud-label">RISK SCORE</div>
+                <div class="hud-value" id="ui-risk-score">--</div>
+              </div>
+              <div class="hud-box secondary-hud">
+                <div class="hud-label">THREAT LEVEL</div>
+                <div class="hud-value threat-text" id="ui-severity">PENDING</div>
+              </div>
+              <div class="hud-box">
+                <div class="hud-label">DEFENSE STATUS</div>
+                <div class="hud-value text-muted" id="ui-defense-status">INACTIVE</div>
+              </div>
+            </div>
+            
+            <div class="mission-section-title">SIMULATION CONTROLS</div>
+            <div class="mission-btn-group">
+              <button id="btn-normal" class="mission-btn">BASELINE</button>
+              <button id="btn-attack" class="mission-btn danger-btn">RECONSTRUCT</button>
+              <button id="btn-run" class="mission-btn primary-btn" style="display:none;">INVESTIGATE</button>
+            </div>
+            
+            <div class="mission-section-title">DEGRADATION PARAMETERS (C-04)</div>
+            <div class="mission-controls">
+              <div class="mission-control-group">
+                <label>TELEMETRY LOSS <span id="val-loss" class="cyan-text">20%</span></label>
+                <input type="range" id="inp-loss" class="cyber-slider" min="0" max="0.5" step="0.05" value="0.2">
+              </div>
+              <div class="mission-control-group">
+                <label>DELAY WINDOW <span id="val-delay" class="cyan-text">4s</span></label>
+                <input type="range" id="inp-delay" class="cyber-slider" min="0" max="12" step="1" value="4">
+              </div>
+              <div class="mission-control-group">
+                <label>DUPLICATE RATE <span id="val-dup" class="cyan-text">10%</span></label>
+                <input type="range" id="inp-dup" class="cyber-slider" min="0" max="0.5" step="0.05" value="0.1">
+              </div>
+            </div>
+            <div class="mission-btn-group">
+              <button id="btn-simulate" class="mission-btn outline-btn">APPLY DEGRADATION</button>
+              <button id="btn-benchmark" class="mission-btn outline-btn">RUN BENCHMARK</button>
+            </div>
+
+          </div>
+        </aside>
+
+        <!-- CENTER: ATTACK RECONSTRUCTION ENGINE -->
+        <main class="mission-workspace">
+          <div class="workspace-corner top-left"></div>
+          <div class="workspace-corner top-right"></div>
+          <div class="workspace-corner bottom-left"></div>
+          <div class="workspace-corner bottom-right"></div>
+          
+          <div class="mission-workspace-header">
+            <div class="workspace-title"><span class="pulse-dot"></span> ATTACK RECONSTRUCTION ENGINE</div>
+            <button class="cyber-btn-small" id="btn-toggle-3d">SWITCH TO 3D SPLINE</button>
+          </div>
+          
+          <div id="graph-container" class="cyber-canvas-container">
+            <div class="canvas-overlay-grid"></div>
+            <canvas id="graph-canvas"></canvas>
+            <div id="spline-placeholder" class="hidden" style="width:100%; height:100%;">
+              <spline-viewer id="spline-viewer" url="https://prod.spline.design/placeholder/scene.splinecode"></spline-viewer>
+            </div>
+          </div>
+          
+          <div class="mission-attack-flow">
+            <div class="mission-section-title" style="margin-top:0;">THREAT MOVEMENT VISUALIZATION</div>
+            <div id="ui-live-status" class="cyber-live-status" style="display:none;">WAITING FOR TELEMETRY</div>
+            <div id="ui-attack-path" class="cyber-attack-path"></div>
+          </div>
+        </main>
+
+        <!-- RIGHT: AI SECURITY COPILOT -->
+        <aside class="mission-panel right-panel">
+          <div class="panel-glitch-border right"></div>
+          <div class="mission-panel-header">
+            <span class="bracket">[</span> AI SECURITY COPILOT <span class="bracket">]</span>
+          </div>
+          
+          <div class="cyber-tabs">
+            <div class="cyber-tab tab active" id="tab-incident">INCIDENT</div>
+            <div class="cyber-tab tab" id="tab-entity">ENTITY</div>
+            <div class="cyber-tab tab" id="tab-intel">INTEL</div>
+          </div>
+          
+          <div class="mission-panel-content" id="inspector-incident">
+            <div class="cyber-empty">NO ACTIVE INCIDENT</div>
+          </div>
+          
+          <div class="mission-panel-content hidden" id="inspector-entity">
+            <div class="cyber-empty">NO ENTITY SELECTED</div>
+          </div>
+          
+          <div class="mission-panel-content hidden" id="inspector-intel">
+             <div class="mission-section-title" style="margin-top:0;">SOC COPILOT</div>
+             <div id="ui-copilot" class="cyber-copilot-box">
+                <div class="cyber-empty" style="padding:10px 0;">AWAITING INCIDENT</div>
+             </div>
+             
+             <div class="mission-section-title">MITRE ATT&CK MAPPING</div>
+             <div class="cyber-mitre-grid" id="ui-mitre"></div>
+             
+             <div class="mission-section-title">AUTONOMOUS PLAYBOOK</div>
+             <div id="ui-playbook" class="cyber-playbook"></div>
+          </div>
+        </aside>
       </div>
-    </aside>
+
+      <!-- TIMELINE BOTTOM PANEL -->
+      <footer class="mission-bottom-panel">
+        <div class="timeline-scanline"></div>
+        <div class="mission-panel-header timeline-header">
+          <div><span class="bracket">[</span> FORENSIC EVENT TIMELINE <span class="bracket">]</span></div>
+          <div id="timeline-filters" class="cyber-timeline-controls">
+            <span id="ui-replay-step" class="timeline-step">Step 0/0</span>
+            <button class="cyber-btn-icon" id="btn-replay-prev">&larr;</button>
+            <button class="cyber-btn-icon" id="btn-replay-next">&rarr;</button>
+            <div class="cyber-divider"></div>
+            <button class="cyber-btn-text" id="btn-replay-play">PLAY</button>
+            <button class="cyber-btn-text" id="btn-replay-pause">PAUSE</button>
+            <button class="cyber-btn-text" id="btn-replay-reset">RESET</button>
+            <div class="cyber-divider"></div>
+            <button class="cyber-btn-filter active" onclick="setTimelineFilter('ALL')">ALL</button>
+            <button class="cyber-btn-filter warning" onclick="setTimelineFilter('ALERT')">ALERTS</button>
+          </div>
+        </div>
+        <div class="cyber-timeline-container">
+          <div id="timeline-scrubber" class="cyber-scrubber"></div>
+          <div id="timeline-events" class="cyber-timeline-events">
+            <div class="cyber-empty" style="margin-top:40px;">NO EVENTS LOADED</div>
+          </div>
+          <!-- Old timeline UI target for dashboard.js -->
+          <div id="ui-timeline" style="display:none;"></div> 
+        </div>
+      </footer>
+    </section>
+
+    <!-- SECTION 3: ENTERPRISE INTELLIGENCE PLATFORM -->
+    <section class="section-enterprise">
+      <div class="section-header center">
+        <h2>ENTERPRISE INTELLIGENCE PLATFORM</h2>
+        <div class="section-divider center-div"></div>
+      </div>
+      
+      <div class="enterprise-stats">
+        <div class="stat-box">
+          <div class="stat-number">50+</div>
+          <div class="stat-label">SECURITY SCENARIOS</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-number">57</div>
+          <div class="stat-label">AUTOMATED TESTS</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-number">10</div>
+          <div class="stat-label">INTELLIGENCE LAYERS</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-number highlight">100%</div>
+          <div class="stat-label">DETERMINISTIC ENGINE</div>
+        </div>
+      </div>
+      
+      <div class="capability-cards">
+        <div class="cap-card">
+          <div class="cap-icon">🎯</div>
+          <h3>THREAT PREDICTION</h3>
+          <div id="ui-prediction" class="cap-content">Engine initialized. Ready for predictive analysis.</div>
+        </div>
+        <div class="cap-card">
+          <div class="cap-icon">🧠</div>
+          <h3>SECURITY MEMORY</h3>
+          <div id="ui-security-memory" class="cap-content">Knowledge base loaded. Pattern matching active.</div>
+        </div>
+        <div class="cap-card">
+          <div class="cap-icon">⚡</div>
+          <h3>AUTONOMOUS PLAYBOOKS</h3>
+          <div id="ui-responses" class="cap-content">Response engine on standby.</div>
+          <div id="ui-autonomous-defense" style="margin-top:10px;"></div>
+        </div>
+        <div class="cap-card">
+          <div class="cap-icon">🌐</div>
+          <h3>ENTERPRISE RISK MAPPING</h3>
+          <div id="ui-enterprise-assets" class="cap-content">Asset discovery complete.</div>
+        </div>
+      </div>
+      
+      <div class="final-cta">
+        <h3>READY FOR NEXT GENERATION CYBER DEFENSE</h3>
+        <button class="btn primary-btn large-cta" onclick="window.scrollTo(0,0)">[ LAUNCH PLATFORM ]</button>
+      </div>
+    </section>
   </div>
-
-  <!-- BOTTOM PANEL: Event Timeline -->
-  <footer class="bottom-panel">
-    <div class="panel-header" style="display:flex; justify-content:space-between; align-items:center;">
-      <span>EVENT TIMELINE</span>
-      <div id="timeline-filters" style="display:flex; gap: 8px;">
-        <button class="btn" id="btn-replay-play" style="padding:2px 8px; font-size:10px; margin:0; background: #32a8ff; color:#fff; border:none;">PLAY</button>
-        <button class="btn" id="btn-replay-pause" style="padding:2px 8px; font-size:10px; margin:0; background: #3b5575; color:#fff; border:none;">PAUSE</button>
-        <button class="btn" id="btn-replay-next" style="padding:2px 8px; font-size:10px; margin:0; background: #3b5575; color:#fff; border:none;">NEXT</button>
-        <button class="btn" id="btn-replay-reset" style="padding:2px 8px; font-size:10px; margin:0; background: #3b5575; color:#fff; border:none;">RESET</button>
-        <div style="width: 1px; background: #1e2d40; margin: 0 4px;"></div>
-        <button class="btn outline" style="padding:2px 8px; font-size:10px; margin:0;" onclick="setTimelineFilter('ALL')">ALL</button>
-        <button class="btn outline" style="padding:2px 8px; font-size:10px; margin:0; color:var(--accent-amber); border-color:var(--accent-amber);" onclick="setTimelineFilter('ALERT')">ALERTS</button>
-      </div>
-    </div>
-    <div class="timeline-container">
-      <div id="timeline-scrubber" class="timeline-scrubber"></div>
-      <div id="timeline-events" class="timeline-events">
-        <div class="empty-state">NO EVENTS LOADED</div>
-      </div>
-    </div>
-  </footer>
 
   <!-- Modal for Benchmark Results -->
   <div id="benchmark-modal" class="modal hidden">
-    <div class="modal-content">
-      <div class="panel-header">BENCHMARK RESULTS <button class="close-btn" id="btn-close-bench">×</button></div>
+    <div class="modal-content glass-panel">
+      <div class="panel-header" style="background:transparent; border-bottom:1px solid var(--border);">BENCHMARK RESULTS <button class="close-btn" id="btn-close-bench">×</button></div>
       <table id="bench-table" class="data-table">
         <thead>
           <tr><th>Scenario</th><th>Events</th><th>Path Found</th><th>Score</th><th>Confidence</th></tr>
@@ -122,5 +319,34 @@
   <script src="/ui/spline/replay.js"></script>
   <script src="/ui/spline/SplineController.js"></script>
   <script src="/ui/app.js"></script>
+  <script src="/ui/dashboard/dashboard.js"></script>
+  
+  <script>
+    // Tab logic
+    document.getElementById('tab-incident').addEventListener('click', () => {
+       document.getElementById('tab-incident').classList.add('active');
+       document.getElementById('tab-entity').classList.remove('active');
+       document.getElementById('tab-intel').classList.remove('active');
+       document.getElementById('inspector-incident').classList.remove('hidden');
+       document.getElementById('inspector-entity').classList.add('hidden');
+       document.getElementById('inspector-intel').classList.add('hidden');
+    });
+    document.getElementById('tab-entity').addEventListener('click', () => {
+       document.getElementById('tab-entity').classList.add('active');
+       document.getElementById('tab-incident').classList.remove('active');
+       document.getElementById('tab-intel').classList.remove('active');
+       document.getElementById('inspector-entity').classList.remove('hidden');
+       document.getElementById('inspector-incident').classList.add('hidden');
+       document.getElementById('inspector-intel').classList.add('hidden');
+    });
+    document.getElementById('tab-intel').addEventListener('click', () => {
+       document.getElementById('tab-intel').classList.add('active');
+       document.getElementById('tab-incident').classList.remove('active');
+       document.getElementById('tab-entity').classList.remove('active');
+       document.getElementById('inspector-intel').classList.remove('hidden');
+       document.getElementById('inspector-incident').classList.add('hidden');
+       document.getElementById('inspector-entity').classList.add('hidden');
+    });
+  </script>
 </body>
 </html>

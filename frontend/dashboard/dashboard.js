@@ -271,7 +271,20 @@ document.getElementById('btn-replay-next').addEventListener('click', () => {
 });
 
 document.getElementById('btn-run').addEventListener('click', () => {
-    // In the prototype without a specific FastAPI endpoint for this, 
-    // we would call fetch('/api/command_center') here.
-    alert("This prototype UI triggers the Python demo script in the terminal. See run_command_center.py output for live data integration.");
+    // Upgraded: Integrates directly with the simulation engine API
+    const scenario = document.getElementById("scenario-select") ? document.getElementById("scenario-select").value : "APT";
+    fetch(`/api/incident?scenario=${scenario}`)
+        .then(res => res.json())
+        .then(data => {
+            if (data.risk) {
+                renderDashboard(data);
+            }
+            if (window.renderAttackStatus) renderAttackStatus("ACTIVE ATTACK DETECTED");
+            if (data.best_path && window.renderAttackPath) {
+                renderAttackPath(data.best_path.nodes, data.best_path.edges);
+            }
+        })
+        .catch(err => {
+            console.error("Failed to run investigation", err);
+        });
 });

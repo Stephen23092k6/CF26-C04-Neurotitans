@@ -224,7 +224,8 @@ async function fetchGraph() {
 
 async function runIncident() {
   try {
-    const iRes = await fetch('/api/incident');
+    const scenario = document.getElementById("scenario-select") ? document.getElementById("scenario-select").value : "1";
+    const iRes = await fetch(`/api/incident?scenario=${scenario}`);
     if (!iRes.ok) throw new Error("API Error");
     const iData = await iRes.json();
     
@@ -239,6 +240,23 @@ async function runIncident() {
     initGraphLayout();
     $("#tab-incident").click();
     updateUI();
+    
+    // Explicitly update dashboard without race conditions
+    if (window.renderDashboard && iData.risk) {
+      window.renderDashboard(iData);
+      if (window.renderAttackStatus) window.renderAttackStatus("ACTIVE ATTACK DETECTED");
+      if (window.renderAttackPath) {
+        if (iData.best_path) {
+          window.renderAttackPath(iData.best_path.nodes, iData.best_path.edges);
+        } else {
+          window.renderAttackPath(["Initial Access", "Privilege Escalation", "Lateral Movement", "Impact"], []);
+        }
+      }
+      const tabIntel = document.getElementById('tab-intel');
+      if (tabIntel) tabIntel.click();
+      const socSection = document.getElementById('soc-section');
+      if (socSection) socSection.scrollIntoView({behavior: 'smooth'});
+    }
   } catch (err) {
     showGlobalError("CONNECTION LOST");
   }
@@ -247,7 +265,15 @@ async function runIncident() {
 async function runSimulate() {
   try {
     const {loss, delay, dup} = state.sim;
-    const res = await fetch(`/api/resilience?loss=${loss}&delay=${delay}&duplicate=${dup}`);
+    const scenario = document.getElementById("scenario-select") ? document.getElementById("scenario-select").value : "1";
+    console.log({
+      telemetry_loss: loss,
+      delay_window: delay,
+      duplicate_rate: dup,
+      scenario: scenario
+    });
+    
+    const res = await fetch(`/api/resilience?loss=${loss}&delay=${delay}&duplicate=${dup}&scenario=${scenario}`);
     if (!res.ok) throw new Error("API Error");
     const data = await res.json();
     
@@ -262,6 +288,24 @@ async function runSimulate() {
     initGraphLayout();
     $("#tab-incident").click();
     updateUI();
+    
+    // Explicitly update dashboard without race conditions
+    if (window.renderDashboard && data.risk) {
+      console.log("LIVE BACKEND RISK:", data.risk);
+      window.renderDashboard(data);
+      if (window.renderAttackStatus) window.renderAttackStatus("ACTIVE ATTACK DETECTED");
+      if (window.renderAttackPath) {
+        if (data.best_path) {
+          window.renderAttackPath(data.best_path.nodes, data.best_path.edges);
+        } else {
+          window.renderAttackPath(["Initial Access", "Privilege Escalation", "Lateral Movement", "Impact"], []);
+        }
+      }
+      const tabIntel = document.getElementById('tab-intel');
+      if (tabIntel) tabIntel.click();
+      const socSection = document.getElementById('soc-section');
+      if (socSection) socSection.scrollIntoView({behavior: 'smooth'});
+    }
   } catch (err) {
     showGlobalError("CONNECTION LOST");
   }
