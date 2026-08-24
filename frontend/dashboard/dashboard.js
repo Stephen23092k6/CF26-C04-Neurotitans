@@ -2,37 +2,83 @@ let currentData = null;
 let currentReplayStep = 0;
 const replayChannel = window.BroadcastChannel ? new BroadcastChannel('neurobrain_replay') : null;
 
+function getRiskScore(data) {
+    if (data.risk_score !== undefined) {
+        return Number(data.risk_score);
+    }
+    if (data.risk && data.risk.risk_score !== undefined) {
+        return Number(data.risk.risk_score);
+    }
+    if (data.risk && data.risk.score !== undefined) {
+        return Number(data.risk.score);
+    }
+    if (data.score !== undefined) {
+        return Number(data.score);
+    }
+    return null;
+}
+
+function getSeverity(data) {
+    if (data.severity !== undefined) {
+        return data.severity;
+    }
+    if (data.risk && data.risk.severity !== undefined) {
+        return data.risk.severity;
+    }
+    return "--";
+}
+
 // Helper to update the UI
 function renderDashboard(data) {
+    console.log("renderDashboard RECEIVED", data);
+    
     if (!data) return;
     currentData = data;
-    currentReplayStep = data.timeline.length;
+    currentReplayStep = data.timeline ? data.timeline.length : 0;
     
     // Risk Meter
     const rs = document.getElementById('ui-risk-score');
+    console.log("RISK ELEMENT", rs);
+    console.log("RISK ELEMENT COUNT", document.querySelectorAll("#ui-risk-score").length);
+    
     const sev = document.getElementById('ui-severity');
     const def = document.getElementById('ui-defense-status');
-    rs.textContent = data.risk.risk_score;
-    sev.textContent = data.risk.severity;
+    
+    const riskScore = getRiskScore(data);
+    console.log("NORMALIZED RISK", riskScore);
+    
+    const severity = getSeverity(data);
+    console.log("NORMALIZED SEVERITY", severity);
+    
+    if (rs) {
+        rs.textContent = riskScore !== null ? riskScore.toFixed(1) : "--";
+        console.log("RISK DOM AFTER WRITE", rs.textContent);
+    }
+    
+    if (sev) {
+        sev.textContent = severity;
+    }
     
     let color = 'var(--text)';
-    if (data.risk.severity === 'CRITICAL') { color = 'var(--accent-red)'; def.textContent = 'DEFENSE: ACTIVE ENGAGEMENT'; def.style.color = color; }
-    if (data.risk.severity === 'HIGH') { color = 'var(--accent-amber)'; def.textContent = 'DEFENSE: ISOLATION'; def.style.color = color; }
-    if (data.risk.severity === 'MEDIUM') { color = 'var(--accent-blue)'; def.textContent = 'DEFENSE: MONITORING'; def.style.color = color; }
-    if (data.risk.severity === 'LOW') { color = 'var(--accent-green)'; def.textContent = 'DEFENSE: STANDBY'; def.style.color = color; }
+    if (severity === 'CRITICAL') { color = 'var(--accent-red)'; if (def) { def.textContent = 'DEFENSE: ACTIVE ENGAGEMENT'; def.style.color = color; } }
+    if (severity === 'HIGH') { color = 'var(--accent-amber)'; if (def) { def.textContent = 'DEFENSE: ISOLATION'; def.style.color = color; } }
+    if (severity === 'MEDIUM') { color = 'var(--accent-blue)'; if (def) { def.textContent = 'DEFENSE: MONITORING'; def.style.color = color; } }
+    if (severity === 'LOW') { color = 'var(--accent-green)'; if (def) { def.textContent = 'DEFENSE: STANDBY'; def.style.color = color; } }
     
-    rs.style.color = color;
-    sev.style.color = color;
+    if (rs) rs.style.color = color;
+    if (sev) sev.style.color = color;
     
     // Responses
     const respContainer = document.getElementById('ui-responses');
-    respContainer.innerHTML = '';
-    data.responses.forEach(r => {
+    if (respContainer && data.responses) {
+        respContainer.innerHTML = '';
+        data.responses.forEach(r => {
         const d = document.createElement('div');
         d.className = 'response-action';
         d.textContent = `> ${r}`;
         respContainer.appendChild(d);
     });
+    }
     
     // Copilot Q&A
     const copilotContainer = document.getElementById('ui-copilot');

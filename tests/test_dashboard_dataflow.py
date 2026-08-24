@@ -18,6 +18,12 @@ def test_dashboard_dataflow_dynamic():
     assert "copilot" in data_base
     assert "mitre" in data_base
     
+    # Verify risk structure for frontend normalization logic
+    assert "risk_score" in data_base["risk"]
+    assert "severity" in data_base["risk"]
+    assert isinstance(data_base["risk"]["risk_score"], (int, float)), "Risk score must be numeric"
+    assert isinstance(data_base["risk"]["severity"], str), "Severity must be a string"
+    
     risk_score_base = data_base["risk"]["risk_score"]
     
     # 2. Degraded Telemetry (Loss 40%)

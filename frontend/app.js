@@ -224,11 +224,17 @@ async function fetchGraph() {
 
 async function runIncident() {
   try {
-    const scenario = document.getElementById("scenario-select") ? document.getElementById("scenario-select").value : "1";
+    const scenario = document.getElementById("scenario-select") ? document.getElementById("scenario-select").value : "APT";
     const iRes = await fetch(`/api/incident?scenario=${scenario}`);
-    if (!iRes.ok) throw new Error("API Error");
+    if (!iRes.ok) throw new Error("API failed");
     const iData = await iRes.json();
     
+    console.log("NEUROBRAIN LIVE API RESPONSE", iData);
+    console.log("TOP LEVEL KEYS", Object.keys(iData));
+    console.log("RISK VALUE", iData.risk_score);
+    console.log("SEVERITY VALUE", iData.severity);
+    console.log("NESTED RISK", iData.risk);
+
     state.graph = iData.graph;
     state.graph.events = iData.events;
     state.incident = iData;
