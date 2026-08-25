@@ -1,4 +1,5 @@
-# Neurobrain X — Full 12-Hour Prototype
+# Neurobrain X 
+
 
 ## Run
 ```bash
